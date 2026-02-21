@@ -1,0 +1,178 @@
+:root {
+  /* Primary Palette */
+  --accu-primary-blue: #4680BF;
+  --accu-primary-orange: #F7AC4E;
+
+  /* Grays */
+  --accu-white: #FFFFFF;
+  --accu-gray-0: #FAFAFA;
+  --accu-gray-1: #EFEFEF;
+  --accu-gray-2: #DCDCDC;
+  --accu-gray-3: #CCCCCC;
+  --accu-gray-4: #9D9D9D;
+  --accu-gray-5: #777777;
+  --accu-gray-6: #4D4D4D;
+  --accu-black: #000000;
+  --accu-gray-bg: #F8F8F8;
+
+  /* Secondary */
+  --accu-yellow: #F4C200;
+  --accu-red: #E54A48;
+  --accu-green: #8BC541;
+  --accu-dark-green: #789A4D;
+  --accu-purple: #AB55A0;
+  --accu-cyan: #17A9E1;
+  --accu-gray-blue: #3D6380;
+  --accu-gold: #FAAE42;
+  --accu-search-highlight: #FFFF00;
+  --accu-blue-dark: #24476C;
+
+  /* Light Tints */
+  --accu-light-red: #FFE3E3;
+  --accu-light-blue: #EBF4FF;
+  --accu-light-cyan: #D6EEF8;
+  --accu-light-green: #ECF7DC;
+  --accu-light-purple: #F2E2F0;
+  --accu-light-orange: #FFEEE3;
+
+  /* Logo Colors */
+  --accu-logo-orange: #F4925D;
+  --accu-logo-blue: #1E4A6C;
+  --accu-logo-gray: #929497;
+
+  /* Button States */
+  --accu-btn-primary-hover: #6293C9;
+  --accu-btn-primary-disabled: #C7D9EC;
+  --accu-btn-warning-hover: #F6A87D;
+  --accu-btn-warning-disabled: #FCDECE;
+  --accu-btn-success-hover: #B3E16F;
+  --accu-btn-success-disabled: #DCEEC6;
+  --accu-btn-error-hover: #F98482;
+  --accu-btn-error-disabled: #F7C9C8;
+  --accu-btn-menu-blue: #DAEAFB;
+  --accu-btn-menu-hover: #E1EEFC;
+
+  /* Form */
+  --accu-input-bg: #F8F8F8;
+  --accu-input-text: #313131;
+  --accu-focus-shadow: #007BFF;
+
+  /* Disabled */
+  --accu-disabled-orange: #F6A87D;
+
+  /* Spacing scale (not from Figma, but standard for consistency) */
+  --accu-space-1: 4px;
+  --accu-space-2: 8px;
+  --accu-space-3: 12px;
+  --accu-space-4: 16px;
+  --accu-space-5: 20px;
+  --accu-space-6: 24px;
+  --accu-space-8: 32px;
+  --accu-space-10: 40px;
+  --accu-space-12: 48px;
+
+  /* Border Radius (from Figma button cornerRadius) */
+  --accu-radius-sm: 3px;
+  --accu-radius-md: 5px;
+  --accu-radius-lg: 8px;
+  --accu-radius-full: 9999px;
+
+  /* Effects */
+  --accu-focus-ring: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  --accu-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --accu-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --accu-shadow-xl: 0 0 13px rgba(0, 0, 0, 0.2);
+  --accu-backdrop: rgba(0, 0, 0, 0.5);
+
+  /* Phase 5 component dimensions */
+  --accu-card-radius: 4px;
+  --accu-card-selected-bg: #FFF9F5;
+  --accu-card-selected-bar: 3px;
+
+  --accu-modal-header-height: 70px;
+  --accu-modal-footer-height: 80px;
+  --accu-modal-width-sm: 650px;
+  --accu-modal-width-lg: 950px;
+  --accu-modal-width-xl: 1100px;
+  --accu-modal-width-fullscreen: calc(100vw - 48px);
+
+  --accu-drawer-width-sm: 600px;
+  --accu-drawer-width-md: 900px;
+  --accu-drawer-width-lg: 1100px;
+
+  --accu-context-trigger-width: 60px;
+  --accu-context-trigger-height: 40px;
+  --accu-context-item-min-width: 200px;
+
+  --accu-panel-header-height: 50px;
+  --accu-panel-action-width: 60px;
+
+  --accu-date-picker-width: 280px;
+  --accu-date-picker-height: 326px;
+  --accu-date-cell-size: 40px;
+  --accu-date-today-bar-width: 38px;
+  --accu-date-today-bar-height: 4px;
+
+  --accu-color-picker-trigger-width: 252px;
+  --accu-color-picker-trigger-height: 50px;
+  --accu-color-picker-dropdown-height: 241px;
+
+  /* Phase 6 component dimensions */
+  --accu-table-tab-height: 42px;
+  --accu-table-header-height: 34px;
+  --accu-table-row-height: 40px;
+  --accu-table-cell-pad-y: 12px;
+  --accu-table-cell-pad-x: 8px;
+
+  --accu-progress-track-height: 8px;
+  --accu-progress-step-line-base: 1px;
+  --accu-progress-step-line-active: 1.5px;
+  --accu-progress-step-dot: 18px;
+  --accu-progress-step-dot-inner: 16px;
+
+  --accu-tile-action-width: 180px;
+  --accu-tile-action-height: 60px;
+  --accu-tile-milestone-width: 152px;
+  --accu-tile-milestone-height: 138px;
+
+  --accu-file-dropzone-width: 426px;
+  --accu-file-dropzone-height: 150px;
+
+  --accu-search-filter-width: 400px;
+  --accu-search-filter-height: 50px;
+  --accu-search-header-width: 445px;
+  --accu-search-header-height: 45px;
+}
+
+/* Typography utility classes */
+.text-display-lg { font-family: 'Roboto', sans-serif; font-size: 42px; line-height: 42px; }
+.text-display-md { font-family: 'Roboto', sans-serif; font-size: 30px; line-height: 34px; }
+.text-display-sm { font-family: 'Roboto', sans-serif; font-size: 18px; line-height: 22px; }
+.text-body-lg    { font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 18px; }
+.text-body-md    { font-family: 'Roboto', sans-serif; font-size: 14px; line-height: 16px; }
+.text-body-sm    { font-family: 'Roboto', sans-serif; font-size: 12px; line-height: 14px; }
+
+.font-light   { font-weight: 300; }
+.font-regular { font-weight: 400; }
+.font-medium  { font-weight: 500; }
+.font-bold    { font-weight: 700; }
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawer-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
