@@ -13,11 +13,11 @@ export function ToolbarBadge({ count, className }: ToolbarBadgeProps) {
   return (
     <span
       className={cn(
-        'absolute -top-1 -right-1 flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1',
+        'relative flex h-[22px] min-w-[22px] items-center justify-center rounded-full',
         'bg-[var(--accu-red)] text-white font-bold',
         className,
       )}
-      style={{ fontSize: '10px', lineHeight: '10px' }}
+      style={{ fontSize: '14px', lineHeight: '18px' }}
     >
       {display}
     </span>

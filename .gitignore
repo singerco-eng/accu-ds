@@ -10,3 +10,4 @@ pnpm-debug.log*
 # Figma data dumps and implementation spec (contains PAT)
 FEATURE_PROMPT.md
 figma_*.json
+figma_*.png

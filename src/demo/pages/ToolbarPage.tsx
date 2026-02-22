@@ -1,32 +1,32 @@
 import { useState } from 'react'
 import { Toolbar } from '../../components/Toolbar'
-import {
-  PlusCircle,
-  Clock,
-  LayoutDashboard,
-  Users,
-  Target,
-  Briefcase,
-  Camera,
-  MapPin,
-  BarChart3,
-  Factory,
-  Wrench,
-} from 'lucide-react'
 import { type ToolbarNavItem } from '../../components/Toolbar/Toolbar.types'
+import {
+  CircleAddIcon,
+  CircleArrowLeftIcon,
+  DashboardIcon,
+  DirectoryIcon,
+  PersonIcon,
+  HammerIcon,
+  PhotosIcon,
+  PawPrintIcon,
+  PlusIcon,
+  CalendarIcon,
+  ToolsIcon,
+} from '../../components/Toolbar/ToolbarIcons'
 
 const defaultNavItems: ToolbarNavItem[] = [
-  { key: 'new', label: 'New', icon: <PlusCircle size={16} />, variant: 'accent' },
-  { key: 'recent', label: 'Recent', icon: <Clock size={16} />, variant: 'accent' },
-  { key: 'dashboard', label: 'Dashboard', icon: <LayoutDashboard size={16} /> },
-  { key: 'contacts', label: 'Contacts', icon: <Users size={16} /> },
-  { key: 'leads', label: 'Leads', icon: <Target size={16} /> },
-  { key: 'jobs', label: 'Jobs', icon: <Briefcase size={16} /> },
-  { key: 'photos', label: 'Photos', icon: <Camera size={16} /> },
-  { key: 'track', label: 'Track', icon: <MapPin size={16} /> },
-  { key: 'reports', label: 'ReportsPlus', icon: <BarChart3 size={16} /> },
-  { key: 'production', label: 'Production', icon: <Factory size={16} /> },
-  { key: 'tools', label: 'Tools', icon: <Wrench size={16} /> },
+  { key: 'new', label: 'New', icon: <CircleAddIcon size={18} />, variant: 'accent' },
+  { key: 'recent', label: 'Recent', icon: <CircleArrowLeftIcon size={18} />, variant: 'accent' },
+  { key: 'dashboard', label: 'Dashboard', icon: <DashboardIcon size={18} /> },
+  { key: 'contacts', label: 'Contacts', icon: <DirectoryIcon size={18} /> },
+  { key: 'leads', label: 'Leads', icon: <PersonIcon size={18} /> },
+  { key: 'jobs', label: 'Jobs', icon: <HammerIcon size={18} /> },
+  { key: 'photos', label: 'Photos', icon: <PhotosIcon size={18} /> },
+  { key: 'track', label: 'Track', icon: <PawPrintIcon size={18} /> },
+  { key: 'reports', label: 'ReportsPlus', icon: <PlusIcon size={18} /> },
+  { key: 'production', label: 'Production', icon: <CalendarIcon size={18} /> },
+  { key: 'tools', label: 'Tools', icon: <ToolsIcon size={18} /> },
 ]
 
 export default function ToolbarPage() {
@@ -47,7 +47,7 @@ export default function ToolbarPage() {
         >
           Full Toolbar (resize browser to see responsive behavior)
         </h2>
-        <div className="rounded-lg overflow-hidden shadow-lg" style={{ marginLeft: '-40px', marginRight: '-40px' }}>
+        <div className="overflow-hidden shadow-lg" style={{ marginLeft: '-40px', marginRight: '-40px' }}>
           <Toolbar
             companyName="AccuLynx Roofing"
             officeName="Chicago Office"
@@ -79,7 +79,7 @@ export default function ToolbarPage() {
         >
           Minimal — No Notifications
         </h2>
-        <div className="rounded-lg overflow-hidden shadow-lg" style={{ marginLeft: '-40px', marginRight: '-40px' }}>
+        <div className="overflow-hidden shadow-lg" style={{ marginLeft: '-40px', marginRight: '-40px' }}>
           <Toolbar
             companyName="Demo Corp"
             userName="Jane Doe"

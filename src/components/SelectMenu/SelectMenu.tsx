@@ -27,9 +27,11 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
     error,
     disabled,
     className,
+    size = 'default',
   },
   ref,
 ) {
+  const isSm = size === 'sm'
   const rootRef = useRef<HTMLDivElement | null>(null)
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
@@ -119,6 +121,8 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
         error={error}
         disabled={disabled}
         active={open}
+        size={size}
+        readOnly={!searchable}
         onClick={() => !disabled && setOpen(true)}
         onFocus={() => !disabled && setOpen(true)}
         onChange={(event) => {
@@ -128,23 +132,29 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
         className={cn('cursor-pointer', disabled && 'cursor-not-allowed')}
         rightAdornment={
           searchable ? (
-            <Search className="h-5 w-5" />
+            <Search className={isSm ? 'h-3.5 w-3.5' : 'h-5 w-5'} />
           ) : (
-            <ChevronDown className={cn('h-6 w-6 transition-transform', open && 'rotate-180')} />
+            <ChevronDown className={cn(isSm ? 'h-3.5 w-3.5' : 'h-6 w-6', 'transition-transform', open && 'rotate-180')} />
           )
         }
       />
 
       {open ? (
         <div
-          className="absolute left-0 top-[calc(100%+var(--accu-space-2))] z-20 w-full overflow-hidden rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] shadow-[var(--accu-shadow-lg)]"
+          className={cn(
+            'absolute left-0 z-20 w-full overflow-hidden rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] shadow-[var(--accu-shadow-lg)]',
+            isSm ? 'top-[calc(100%+2px)]' : 'top-[calc(100%+var(--accu-space-2))]',
+          )}
           onMouseDown={handleDropdownMouseDown}
         >
-          <div className="max-h-[260px] overflow-y-auto">
+          <div className={cn('overflow-y-auto', isSm ? 'max-h-[200px]' : 'max-h-[260px]')}>
             {multiple ? (
               <button
                 type="button"
-                className="flex h-[34px] w-full items-center px-[10px] hover:bg-[var(--accu-light-blue)]"
+                className={cn(
+                  'flex w-full items-center hover:bg-[var(--accu-light-blue)]',
+                  isSm ? 'h-[28px] px-2' : 'h-[34px] px-[10px]',
+                )}
                 onMouseDown={(e) => e.preventDefault()}
                 onClick={() => onSelectAll()}
               >
@@ -152,7 +162,10 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
                   checked={options.filter((option) => !option.disabled).every((item) => selectedValues.includes(item.value))}
                   onChange={() => onSelectAll()}
                   label="Select All"
-                  labelClassName="accu-text-body-lg font-normal text-[var(--accu-gray-6)] pointer-events-none"
+                  labelClassName={cn(
+                    'font-normal text-[var(--accu-gray-6)] pointer-events-none',
+                    isSm ? 'accu-text-body-sm' : 'accu-text-body-lg',
+                  )}
                   className="w-full pointer-events-none"
                 />
               </button>
@@ -168,7 +181,8 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
                     key={option.value}
                     disabled={option.disabled}
                     className={cn(
-                      'flex h-[34px] w-full items-center px-[10px]',
+                      'flex w-full items-center',
+                      isSm ? 'h-[28px] px-2' : 'h-[34px] px-[10px]',
                       option.disabled ? 'cursor-not-allowed opacity-50' : 'hover:bg-[var(--accu-light-blue)]',
                       selected && 'bg-[var(--accu-light-blue)]',
                     )}
@@ -180,7 +194,10 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
                       disabled={option.disabled}
                       onChange={() => onSelect(option)}
                       label={option.label}
-                      labelClassName="accu-text-body-lg font-normal text-[var(--accu-gray-6)] pointer-events-none"
+                      labelClassName={cn(
+                        'font-normal text-[var(--accu-gray-6)] pointer-events-none',
+                        isSm ? 'accu-text-body-sm' : 'accu-text-body-lg',
+                      )}
                       className="w-full pointer-events-none"
                     />
                   </button>
@@ -193,21 +210,16 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
                   key={option.value}
                   disabled={option.disabled}
                   className={cn(
-                    'flex h-[34px] w-full items-center px-[10px] text-left',
+                    'flex w-full items-center text-left',
+                    isSm ? 'h-[28px] px-2 accu-text-body-sm' : 'h-[34px] px-[10px] accu-text-body-lg',
+                    'font-normal text-[var(--accu-gray-6)]',
                     option.disabled ? 'cursor-not-allowed opacity-50' : 'hover:bg-[var(--accu-light-blue)]',
-                    selected && 'bg-[var(--accu-light-blue)]',
+                    selected && 'bg-[var(--accu-light-blue)] font-medium',
                   )}
                   onMouseDown={(e) => e.preventDefault()}
                   onClick={() => onSelect(option)}
                 >
-                  <Checkbox
-                    checked={selected}
-                    disabled={option.disabled}
-                    onChange={() => onSelect(option)}
-                    label={option.label}
-                    labelClassName="accu-text-body-lg font-normal text-[var(--accu-gray-6)] pointer-events-none"
-                    className="w-full pointer-events-none"
-                  />
+                  {option.label}
                 </button>
               )
             })}

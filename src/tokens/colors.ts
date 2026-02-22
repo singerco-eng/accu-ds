@@ -66,7 +66,7 @@ export const colors = {
 
   // Form Colors
   form: {
-    inputBackground: '#F8F8F8',
+    inputBackground: '#EFEFEF',
     inputText: '#313131',
     focusShadow: '#007BFF',
   },

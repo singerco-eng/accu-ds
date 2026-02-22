@@ -1,4 +1,5 @@
 import { NavLink, Route, Routes } from 'react-router-dom'
+import ProductionSchedulerPage from './prod-scheduler/ProductionSchedulerPage'
 import AnnouncementsPage from './demo/pages/AnnouncementsPage'
 import AvatarsPage from './demo/pages/AvatarsPage'
 import BadgesPage from './demo/pages/BadgesPage'
@@ -105,7 +106,7 @@ const navGroups: NavGroup[] = [
   },
 ]
 
-function App() {
+function DesignSystemLayout() {
   return (
     <div className="min-h-screen" style={{ background: 'var(--accu-gray-bg)' }}>
       <aside
@@ -149,6 +150,24 @@ function App() {
               </div>
             </section>
           ))}
+
+          <section>
+            <h2
+              className="font-bold mb-2"
+              style={{ color: 'var(--accu-gray-5)', textTransform: 'uppercase', fontSize: '10px', lineHeight: '12px' }}
+            >
+              Applications
+            </h2>
+            <div className="flex flex-col gap-1">
+              <NavLink
+                to="/production-scheduler"
+                className="accu-text-body-md block rounded px-3 py-2 hover:bg-[var(--accu-light-blue)] font-normal"
+                style={{ color: 'var(--accu-gray-6)' }}
+              >
+                Production Scheduler
+              </NavLink>
+            </div>
+          </section>
         </nav>
       </aside>
 
@@ -188,6 +207,15 @@ function App() {
         </Routes>
       </main>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/production-scheduler" element={<ProductionSchedulerPage />} />
+      <Route path="/*" element={<DesignSystemLayout />} />
+    </Routes>
   )
 }
 

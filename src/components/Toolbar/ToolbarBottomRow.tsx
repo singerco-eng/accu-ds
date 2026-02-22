@@ -1,8 +1,9 @@
 import { useState, useCallback } from 'react'
-import { Search, HelpCircle, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { cn } from '../../lib/utils'
 import { ToolbarButton } from './ToolbarButton'
 import { type ToolbarNavItem } from './Toolbar.types'
+import { SearchIcon, CircleHelpIcon } from './ToolbarIcons'
 
 interface ToolbarBottomRowProps {
   navItems: ToolbarNavItem[]
@@ -46,8 +47,8 @@ export function ToolbarBottomRow({
           {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
 
-        {/* Desktop nav items */}
-        <div className="hidden lg:flex items-center h-full">
+        {/* Desktop nav items (Left frame) */}
+        <div className="hidden lg:flex items-center h-full shrink-0">
           {navItems.map((item) => (
             <ToolbarButton
               key={item.key}
@@ -60,21 +61,33 @@ export function ToolbarBottomRow({
           ))}
         </div>
 
-        <div className="flex-1" />
+        {/* Mobile spacer */}
+        <div className="flex-1 lg:hidden" />
 
-        {/* Desktop search bar */}
-        <div className="hidden lg:flex items-center h-[30px] mr-2">
-          <div className="flex items-center bg-white/20 rounded-[var(--accu-radius-sm)] h-full">
-            <Search size={14} className="text-white/60 ml-2.5 shrink-0" />
+        {/* Desktop Right frame: search + help (right-aligned) */}
+        <div className="hidden lg:flex items-center h-full ml-auto shrink-0">
+          <div
+            className="flex items-center justify-between h-full bg-[#F0F0F0]"
+            style={{ padding: '4px 8px', width: '360px' }}
+          >
             <input
               type="text"
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               onKeyDown={handleSearchKeyDown}
               placeholder={searchPlaceholder}
-              className="bg-transparent text-white placeholder-white/50 accu-text-body-sm font-normal px-2 h-full w-[220px] outline-none"
+              className="bg-transparent text-[#9D9D9D] placeholder-[#9D9D9D] font-normal h-full flex-1 outline-none"
+              style={{ fontSize: '14px', lineHeight: '18px' }}
             />
+            <SearchIcon size={24} className="text-[var(--accu-primary-blue)] shrink-0 ml-[11px]" />
           </div>
+          <ToolbarButton
+            label="Help"
+            icon={<CircleHelpIcon size={18} />}
+            variant="accent"
+            onClick={onHelpClick}
+            className="shrink-0"
+          />
         </div>
 
         {/* Mobile/tablet search icon */}
@@ -84,16 +97,18 @@ export function ToolbarBottomRow({
           aria-label="Search"
           className="flex lg:hidden items-center justify-center h-[45px] w-10 text-white hover:bg-white/10 cursor-pointer"
         >
-          <Search size={18} />
+          <SearchIcon size={18} />
         </button>
 
-        {/* Help button */}
-        <ToolbarButton
-          label="Help"
-          icon={<HelpCircle size={16} />}
-          variant="accent"
-          onClick={onHelpClick}
-        />
+        {/* Mobile help button */}
+        <div className="lg:hidden">
+          <ToolbarButton
+            label="Help"
+            icon={<CircleHelpIcon size={18} />}
+            variant="accent"
+            onClick={onHelpClick}
+          />
+        </div>
       </div>
 
       {/* Mobile dropdown menu */}
@@ -124,16 +139,17 @@ export function ToolbarBottomRow({
           </div>
 
           {/* Mobile search within menu */}
-          <div className="flex items-center bg-white/20 mx-4 mb-3 rounded-[var(--accu-radius-sm)] h-[36px]">
-            <Search size={14} className="text-white/60 ml-2.5 shrink-0" />
+          <div className="flex items-center bg-[#F0F0F0] mx-4 mb-3 h-[36px] px-2">
             <input
               type="text"
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               onKeyDown={handleSearchKeyDown}
               placeholder={searchPlaceholder}
-              className="bg-transparent text-white placeholder-white/50 accu-text-body-sm font-normal px-2 h-full w-full outline-none"
+              className="bg-transparent text-[#9D9D9D] placeholder-[#9D9D9D] font-normal px-2 h-full w-full outline-none"
+              style={{ fontSize: '14px', lineHeight: '18px' }}
             />
+            <SearchIcon size={24} className="text-[var(--accu-primary-blue)] shrink-0" />
           </div>
         </div>
       )}

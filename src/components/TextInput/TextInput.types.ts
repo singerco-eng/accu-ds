@@ -1,6 +1,8 @@
 import { type ReactNode } from 'react'
 import { type ComponentPropsWithoutRef } from 'react'
 
+export type TextInputSize = 'default' | 'sm'
+
 export interface TextInputProps extends Omit<ComponentPropsWithoutRef<'input'>, 'size'> {
   label?: string
   error?: string
@@ -10,4 +12,5 @@ export interface TextInputProps extends Omit<ComponentPropsWithoutRef<'input'>, 
   active?: boolean
   rightAdornment?: ReactNode
   hideNativeValueText?: boolean
+  size?: TextInputSize
 }

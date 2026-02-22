@@ -30,10 +30,12 @@ export const TextInput = forwardRef<HTMLInputElement | HTMLTextAreaElement, Text
     rightAdornment,
     hideNativeValueText = false,
     placeholder,
+    size = 'default',
     ...props
   },
   ref,
 ) {
+  const isSm = size === 'sm'
   const generatedId = useId()
   const inputId = id ?? generatedId
   const [focused, setFocused] = useState(false)
@@ -52,14 +54,31 @@ export const TextInput = forwardRef<HTMLInputElement | HTMLTextAreaElement, Text
   const hasError = Boolean(error)
   const requiredEmpty = Boolean(required && !focused && !hasValue && !hasError)
 
+  const borderClass = hasError
+    ? 'border-[var(--accu-red)]'
+    : (focused || active)
+      ? 'border-[var(--accu-primary-blue)]'
+      : requiredEmpty
+        ? 'border-[var(--accu-primary-orange)]'
+        : 'border-transparent'
+
+  const bgClass = hasError
+    ? 'bg-[var(--accu-light-red)]'
+    : requiredEmpty
+      ? 'bg-[var(--accu-light-orange)]'
+      : 'bg-[var(--accu-input-bg)]'
+
   const fieldClass = cn(
-    'accu-text-body-lg w-full border border-transparent px-[10px] pb-1 pt-[23px] text-[var(--accu-input-text)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50',
-    rightAdornment && 'pr-10',
+    'w-full border text-[var(--accu-input-text)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50',
+    isSm
+      ? 'accu-text-body-sm h-[28px] px-2 py-1'
+      : 'accu-text-body-lg px-[10px] pb-1 pt-[23px]',
+    !isSm && rightAdornment && 'pr-10',
+    isSm && rightAdornment && 'pr-7',
     hideNativeValueText && 'text-transparent',
-    multiline ? 'min-h-[50px] resize-y' : 'h-[50px]',
-    hasError && 'border-b-[var(--accu-red)] bg-[var(--accu-light-red)]',
-    requiredEmpty && 'border-b-[var(--accu-primary-orange)] bg-[var(--accu-light-orange)]',
-    !hasError && !requiredEmpty && 'bg-[var(--accu-input-bg)]',
+    !isSm && (multiline ? 'min-h-[50px] resize-y' : 'h-[50px]'),
+    bgClass,
+    borderClass,
     (focused || active) && 'shadow-[var(--accu-focus-ring)]',
     className,
   )
@@ -67,7 +86,7 @@ export const TextInput = forwardRef<HTMLInputElement | HTMLTextAreaElement, Text
   return (
     <div className="w-full">
       <div className="relative">
-        {hasFloatingLabel ? (
+        {hasFloatingLabel && !isSm ? (
           <label
             htmlFor={inputId}
             className={cn(
@@ -111,7 +130,7 @@ export const TextInput = forwardRef<HTMLInputElement | HTMLTextAreaElement, Text
               className={fieldClass}
               value={value}
               defaultValue={defaultValue}
-              placeholder=""
+              placeholder={isSm ? (placeholder ?? '') : ''}
               onFocus={(event) => {
                 setFocused(true)
                 onFocus?.(event)
@@ -128,7 +147,12 @@ export const TextInput = forwardRef<HTMLInputElement | HTMLTextAreaElement, Text
               {...props}
             />
             {rightAdornment ? (
-              <span className="pointer-events-none absolute right-[10px] top-1/2 -translate-y-1/2 text-[var(--accu-gray-4)]">
+              <span
+                className={cn(
+                  'pointer-events-none absolute top-1/2 -translate-y-1/2 text-[var(--accu-gray-4)]',
+                  isSm ? 'right-1.5 [&>svg]:h-3.5 [&>svg]:w-3.5' : 'right-[10px]',
+                )}
+              >
                 {rightAdornment}
               </span>
             ) : null}

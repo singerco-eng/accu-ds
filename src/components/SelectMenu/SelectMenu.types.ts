@@ -4,6 +4,8 @@ export interface SelectOption {
   disabled?: boolean
 }
 
+export type SelectMenuSize = 'default' | 'sm'
+
 export interface SelectMenuProps {
   options: SelectOption[]
   value?: string | string[]
@@ -16,4 +18,5 @@ export interface SelectMenuProps {
   error?: string
   disabled?: boolean
   className?: string
+  size?: SelectMenuSize
 }

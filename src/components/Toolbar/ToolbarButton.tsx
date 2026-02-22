@@ -16,7 +16,7 @@ export function ToolbarButton({ label, icon, variant = 'default', active, onClic
       type="button"
       onClick={onClick}
       className={cn(
-        'flex items-center gap-1.5 px-3 h-[45px] accu-text-body-md font-normal text-white whitespace-nowrap',
+        'flex flex-col items-center justify-center h-[45px] px-2 py-[3px] text-white',
         'transition-colors duration-150 cursor-pointer',
         variant === 'accent'
           ? 'bg-[var(--accu-logo-orange)] hover:brightness-110'
@@ -25,9 +25,10 @@ export function ToolbarButton({ label, icon, variant = 'default', active, onClic
             : 'hover:bg-white/10',
         className,
       )}
+      style={{ gap: '2px' }}
     >
       {icon}
-      <span>{label}</span>
+      <span style={{ fontSize: '10px', lineHeight: '12px', whiteSpace: 'nowrap' }} className="font-normal">{label}</span>
     </button>
   )
 }
