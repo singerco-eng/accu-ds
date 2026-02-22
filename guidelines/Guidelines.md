@@ -45,6 +45,7 @@ BEFORE using ANY component, you MUST read its guidelines file first:
 - Using Modal? Read guidelines/components/modal.md FIRST
 - Using TextInput? Read guidelines/components/text-input.md FIRST
 - Using Table? Read guidelines/components/table.md FIRST
+- Using Toolbar? Read guidelines/components/toolbar.md FIRST
 
 Step 5: Plan what icons you need to use (REQUIRED)
 Read overview-icons.md for icon usage patterns.

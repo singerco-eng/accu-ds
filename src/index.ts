@@ -26,6 +26,7 @@ export * from './components/TextInput'
 export * from './components/Tile'
 export * from './components/Toast'
 export * from './components/Toggle'
+export * from './components/Toolbar'
 export * from './components/Tooltip'
 
 export { colors } from './tokens/colors'

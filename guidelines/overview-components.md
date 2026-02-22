@@ -32,6 +32,7 @@ Here are the guidelines files and descriptions for the AccuLynx components:
 | Tile | Content tile with a milestone tile variant for pipeline stages | [tile.md](components/tile.md) |
 | Toast | Brief notification alerts with auto-dismiss and action buttons | [toast.md](components/toast.md) |
 | Toggle | On/off toggle switch | [toggle.md](components/toggle.md) |
+| Toolbar | Main navigation toolbar — two-row header with logo, location, notifications, nav buttons, search | [toolbar.md](components/toolbar.md) |
 | Tooltip | Hover/focus tooltip with configurable position | [tooltip.md](components/tooltip.md) |
 
 ## General Component Usage and Best Practices

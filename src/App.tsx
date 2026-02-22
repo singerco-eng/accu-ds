@@ -28,6 +28,7 @@ import TilesPage from './demo/pages/TilesPage'
 import ToastsPage from './demo/pages/ToastsPage'
 import TogglesPage from './demo/pages/TogglesPage'
 import TooltipsPage from './demo/pages/TooltipsPage'
+import ToolbarPage from './demo/pages/ToolbarPage'
 import TypographyPage from './demo/pages/TypographyPage'
 
 type NavItem = {
@@ -94,6 +95,12 @@ const navGroups: NavGroup[] = [
       { label: 'Tiles', path: '/tiles' },
       { label: 'File Uploader', path: '/file-uploader' },
       { label: 'Search Bars', path: '/search-bars' },
+    ],
+  },
+  {
+    title: 'Navigation',
+    items: [
+      { label: 'Toolbar', path: '/toolbar' },
     ],
   },
 ]
@@ -177,6 +184,7 @@ function App() {
           <Route path="/tiles" element={<TilesPage />} />
           <Route path="/file-uploader" element={<FileUploaderPage />} />
           <Route path="/search-bars" element={<SearchBarsPage />} />
+          <Route path="/toolbar" element={<ToolbarPage />} />
         </Routes>
       </main>
     </div>
