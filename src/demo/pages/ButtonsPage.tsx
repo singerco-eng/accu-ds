@@ -34,10 +34,10 @@ function ButtonRow({ variant, disabled }: { variant: ButtonVariant; disabled?: b
 export default function ButtonsPage() {
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Buttons</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Buttons</h1>
       {variants.map((variant) => (
         <section key={variant.value} className="mb-8">
-          <h2 className="text-display-sm font-bold mb-4">{variant.label}</h2>
+          <h2 className="accu-text-display-sm font-bold mb-4">{variant.label}</h2>
           <div className="mb-3">
             <ButtonRow variant={variant.value} />
           </div>

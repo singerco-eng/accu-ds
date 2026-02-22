@@ -25,7 +25,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     <button
       ref={ref}
       className={cn(
-        'inline-flex items-center justify-center gap-1.5 rounded-[var(--accu-radius-md)] px-2.5 py-2.5 text-body-lg font-medium transition-colors cursor-pointer disabled:cursor-not-allowed focus-visible:outline-none focus-visible:shadow-[var(--accu-focus-ring)]',
+        'inline-flex items-center justify-center gap-1.5 rounded-[var(--accu-radius-md)] px-2.5 py-2.5 accu-text-body-lg font-medium transition-colors cursor-pointer disabled:cursor-not-allowed focus-visible:outline-none focus-visible:shadow-[var(--accu-focus-ring)]',
         iconOnly && 'h-10 w-10 p-2.5',
         variantClasses[variant],
         className,

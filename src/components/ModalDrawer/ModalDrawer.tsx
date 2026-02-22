@@ -64,7 +64,7 @@ export const ModalDrawer = forwardRef<HTMLDivElement, ModalDrawerProps>(function
         >
           <div className="grid h-full w-full grid-cols-[56px_1fr_56px] items-center">
             <span className="inline-flex h-[42px] w-[56px]" aria-hidden="true" />
-            <h2 className="text-display-lg font-thin leading-[42px] text-[var(--accu-gray-6)] text-center">{title}</h2>
+            <h2 className="accu-text-display-lg font-thin leading-[42px] text-[var(--accu-gray-6)] text-center">{title}</h2>
             <button
               type="button"
               onClick={onClose}

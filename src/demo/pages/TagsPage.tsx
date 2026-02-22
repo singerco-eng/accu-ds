@@ -3,8 +3,8 @@ import { Tag } from '../../components/Tag'
 export default function TagsPage() {
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Tags</h1>
-      <p className="text-body-md mb-6" style={{ color: 'var(--accu-gray-5)' }}>
+      <h1 className="accu-text-display-sm font-bold mb-6">Tags</h1>
+      <p className="accu-text-body-md mb-6" style={{ color: 'var(--accu-gray-5)' }}>
         Small solid-colored labels. 10px text, white on colored background.
       </p>
 

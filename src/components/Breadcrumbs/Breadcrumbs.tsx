@@ -15,7 +15,7 @@ export const Breadcrumbs = forwardRef<HTMLDivElement, BreadcrumbsProps>(function
       >
         <ChevronLeft className="h-3 w-3" style={{ color: 'var(--accu-primary-blue)' }} />
         <FileText className="h-3 w-3" style={{ color: 'var(--accu-primary-blue)' }} />
-        <span className="text-body-sm font-regular" style={{ color: 'var(--accu-primary-blue)' }}>
+        <span className="accu-text-body-sm font-normal" style={{ color: 'var(--accu-primary-blue)' }}>
           Back to List
         </span>
       </div>
@@ -30,7 +30,7 @@ export const Breadcrumbs = forwardRef<HTMLDivElement, BreadcrumbsProps>(function
         const label = (
           <span
             className={cn(
-              'text-body-sm inline-flex items-center gap-1.5 transition-colors',
+              'accu-text-body-sm inline-flex items-center gap-1.5 transition-colors',
               !isLast && 'group-hover:font-medium group-hover:text-[var(--accu-primary-blue)] group-focus-visible:font-medium group-focus-visible:text-[var(--accu-primary-blue)]',
               isActive && 'font-medium',
             )}

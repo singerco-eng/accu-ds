@@ -4,8 +4,8 @@
 
 **Import**:
 ```tsx
-import { SelectMenu } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { SelectMenu } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
 **Props**:

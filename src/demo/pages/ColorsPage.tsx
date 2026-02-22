@@ -10,7 +10,7 @@ type ColorSectionProps = {
 function ColorSection({ title, tokens }: ColorSectionProps) {
   return (
     <section className="mb-10">
-      <h2 className="text-display-sm font-bold mb-4">{title}</h2>
+      <h2 className="accu-text-display-sm font-bold mb-4">{title}</h2>
       <div className="flex flex-wrap gap-4">
         {Object.entries(tokens).map(([name, value]) => (
           <div key={name} className="w-24">
@@ -22,8 +22,8 @@ function ColorSection({ title, tokens }: ColorSectionProps) {
                 border: '1px solid var(--accu-gray-2)',
               }}
             />
-            <p className="text-body-sm font-bold">{name}</p>
-            <p className="text-body-sm font-regular" style={{ color: 'var(--accu-gray-5)' }}>
+            <p className="accu-text-body-sm font-bold">{name}</p>
+            <p className="accu-text-body-sm font-normal" style={{ color: 'var(--accu-gray-5)' }}>
               {value}
             </p>
           </div>
@@ -36,7 +36,7 @@ function ColorSection({ title, tokens }: ColorSectionProps) {
 export default function ColorsPage() {
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Colors</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Colors</h1>
       <ColorSection title="Primary" tokens={colors.primary} />
       <ColorSection title="Grays" tokens={colors.gray} />
       <ColorSection title="Secondary" tokens={colors.secondary} />

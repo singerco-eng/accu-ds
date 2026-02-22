@@ -4,8 +4,8 @@
 
 **Import**:
 ```tsx
-import { ProgressBar, ProgressSteps } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { ProgressBar, ProgressSteps } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
 **Note**: The same module exports `ProgressSteps` for step-based progress (e.g., multi-step forms). Use `steps: string[]` and `currentStep: number` for that component.

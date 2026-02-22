@@ -1,4 +1,4 @@
-import './tokens/index.css'
+import './lib-styles.css'
 
 export * from './components/Announcement'
 export * from './components/Avatar'

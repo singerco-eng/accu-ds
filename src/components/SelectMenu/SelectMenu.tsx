@@ -152,7 +152,7 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
                   checked={options.filter((option) => !option.disabled).every((item) => selectedValues.includes(item.value))}
                   onChange={() => onSelectAll()}
                   label="Select All"
-                  labelClassName="text-body-lg font-regular text-[var(--accu-gray-6)] pointer-events-none"
+                  labelClassName="accu-text-body-lg font-normal text-[var(--accu-gray-6)] pointer-events-none"
                   className="w-full pointer-events-none"
                 />
               </button>
@@ -180,7 +180,7 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
                       disabled={option.disabled}
                       onChange={() => onSelect(option)}
                       label={option.label}
-                      labelClassName="text-body-lg font-regular text-[var(--accu-gray-6)] pointer-events-none"
+                      labelClassName="accu-text-body-lg font-normal text-[var(--accu-gray-6)] pointer-events-none"
                       className="w-full pointer-events-none"
                     />
                   </button>
@@ -205,7 +205,7 @@ export const SelectMenu = forwardRef<HTMLDivElement, SelectMenuProps>(function S
                     disabled={option.disabled}
                     onChange={() => onSelect(option)}
                     label={option.label}
-                    labelClassName="text-body-lg font-regular text-[var(--accu-gray-6)] pointer-events-none"
+                    labelClassName="accu-text-body-lg font-normal text-[var(--accu-gray-6)] pointer-events-none"
                     className="w-full pointer-events-none"
                   />
                 </button>

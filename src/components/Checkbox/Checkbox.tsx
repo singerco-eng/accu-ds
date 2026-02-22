@@ -49,7 +49,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
           {!indeterminate && isChecked ? <Check className="h-3.5 w-3.5 text-white" strokeWidth={3} /> : null}
         </span>
       </span>
-      {label ? <span className={cn('text-body-md font-regular text-[var(--accu-gray-6)]', labelClassName)}>{label}</span> : null}
+      {label ? <span className={cn('accu-text-body-md font-normal text-[var(--accu-gray-6)]', labelClassName)}>{label}</span> : null}
     </label>
   )
 })

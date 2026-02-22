@@ -109,7 +109,7 @@ function App() {
           borderRight: '1px solid var(--accu-gray-2)',
         }}
       >
-        <h1 className="text-display-sm font-bold mb-6" style={{ color: 'var(--accu-primary-blue)' }}>
+        <h1 className="accu-text-display-sm font-bold mb-6" style={{ color: 'var(--accu-primary-blue)' }}>
           AccuLynx DS
         </h1>
 
@@ -129,7 +129,7 @@ function App() {
                     to={item.path}
                     end={item.path === '/'}
                     className={({ isActive }) =>
-                      `text-body-md block rounded px-3 py-2 hover:bg-[var(--accu-light-blue)] ${isActive ? 'font-bold' : 'font-regular'}`
+                      `accu-text-body-md block rounded px-3 py-2 hover:bg-[var(--accu-light-blue)] ${isActive ? 'font-bold' : 'font-normal'}`
                     }
                     style={({ isActive }) => ({
                       color: isActive ? 'var(--accu-primary-blue)' : 'var(--accu-gray-6)',

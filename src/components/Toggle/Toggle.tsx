@@ -32,8 +32,7 @@ export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(function Toggle(
           ref={ref}
           type="checkbox"
           role="switch"
-          checked={checked}
-          defaultChecked={defaultChecked}
+          {...(isControlled ? { checked: Boolean(checked) } : { defaultChecked })}
           disabled={disabled}
           className="peer sr-only"
           onFocus={() => setFocused(true)}
@@ -58,7 +57,7 @@ export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(function Toggle(
           />
         </span>
       </span>
-      {label ? <span className="text-body-md font-regular text-[var(--accu-gray-6)]">{label}</span> : null}
+      {label ? <span className="accu-text-body-md font-normal text-[var(--accu-gray-6)]">{label}</span> : null}
     </label>
   )
 })

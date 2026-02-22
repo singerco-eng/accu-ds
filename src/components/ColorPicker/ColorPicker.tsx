@@ -334,7 +334,7 @@ export const ColorPicker = forwardRef<HTMLDivElement, ColorPickerProps>(function
               <button
                 type="button"
                 onClick={() => setMode('custom')}
-                className="mt-2 w-full cursor-pointer px-2 py-2 text-left text-body-md font-regular text-[var(--accu-primary-blue)] hover:underline"
+                className="mt-2 w-full cursor-pointer px-2 py-2 text-left accu-text-body-md font-normal text-[var(--accu-primary-blue)] hover:underline"
               >
                 Create Custom Color
               </button>
@@ -369,7 +369,7 @@ export const ColorPicker = forwardRef<HTMLDivElement, ColorPickerProps>(function
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') handleHexCommit()
                   }}
-                  className="w-full bg-[var(--accu-gray-0)] px-1 py-[6px] text-[13px] font-regular text-[var(--accu-gray-5)] outline-none"
+                  className="w-full bg-[var(--accu-gray-0)] px-1 py-[6px] text-[13px] font-normal text-[var(--accu-gray-5)] outline-none"
                   style={{ height: 28 }}
                 />
               </div>
@@ -379,7 +379,7 @@ export const ColorPicker = forwardRef<HTMLDivElement, ColorPickerProps>(function
                 <button
                   type="button"
                   onClick={() => setMode('swatches')}
-                  className="w-full cursor-pointer px-2 py-2 text-left text-body-md font-regular text-[var(--accu-primary-blue)] hover:underline"
+                  className="w-full cursor-pointer px-2 py-2 text-left accu-text-body-md font-normal text-[var(--accu-primary-blue)] hover:underline"
                 >
                   Return to Swatches
                 </button>

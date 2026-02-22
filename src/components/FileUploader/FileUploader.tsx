@@ -76,7 +76,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(functi
           }
         }}
       >
-        <p className="text-body-lg font-bold text-[var(--accu-primary-blue)]">{label}</p>
+        <p className="accu-text-body-lg font-bold text-[var(--accu-primary-blue)]">{label}</p>
       </div>
 
       <input
@@ -97,8 +97,8 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(functi
                   <img src={item.previewUrl} alt={item.file.name} className="h-10 w-10 rounded-[var(--accu-radius-sm)] object-cover" />
                 ) : null}
                 <div>
-                  <p className="text-body-sm font-bold text-[var(--accu-gray-6)]">{item.file.name}</p>
-                  <p className="text-body-sm text-[var(--accu-gray-5)]">{Math.round(item.file.size / 1024)} KB</p>
+                  <p className="accu-text-body-sm font-bold text-[var(--accu-gray-6)]">{item.file.name}</p>
+                  <p className="accu-text-body-sm text-[var(--accu-gray-5)]">{Math.round(item.file.size / 1024)} KB</p>
                 </div>
               </div>
               <button
@@ -111,7 +111,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(functi
               </button>
             </div>
           ))}
-          <p className="text-body-sm text-[var(--accu-gray-5)]">Total: {Math.round(totalSize / 1024)} KB</p>
+          <p className="accu-text-body-sm text-[var(--accu-gray-5)]">Total: {Math.round(totalSize / 1024)} KB</p>
         </div>
       ) : null}
     </div>

@@ -7,10 +7,10 @@ export default function SlidersPage() {
 
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Sliders</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Sliders</h1>
       <div className="grid gap-8">
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Label Top (Percentage)</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Label Top (Percentage)</h2>
           <Slider
             label="Completion"
             value={percentage}
@@ -22,7 +22,7 @@ export default function SlidersPage() {
         </section>
 
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Label Left (Currency)</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Label Left (Currency)</h2>
           <Slider
             label="Budget"
             min={0}
@@ -36,7 +36,7 @@ export default function SlidersPage() {
         </section>
 
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Disabled</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Disabled</h2>
           <Slider
             label="Disabled Slider"
             value={70}

@@ -4,8 +4,8 @@
 
 **Import**:
 ```tsx
-import { Checkbox } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { Checkbox } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
 **Props**:

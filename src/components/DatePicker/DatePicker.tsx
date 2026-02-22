@@ -104,7 +104,7 @@ export const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(function D
             <div className="flex items-center gap-1 rounded-[var(--accu-radius-sm)] px-[var(--accu-space-2)] py-[var(--accu-space-1)] hover:bg-[var(--accu-gray-1)]">
               <button
                 type="button"
-                className="text-[18px] font-regular leading-[20px] text-[var(--accu-gray-6)]"
+                className="text-[18px] font-normal leading-[20px] text-[var(--accu-gray-6)]"
                 onClick={() => setViewDate(new Date(viewDate.getFullYear() - 1, viewDate.getMonth(), 1))}
               >
                 {yearLabel}
@@ -115,7 +115,7 @@ export const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(function D
 
           <div className="mb-[var(--accu-space-1)] grid grid-cols-7">
             {weekDays.map((day) => (
-              <div key={day} className="flex h-[var(--accu-date-cell-size)] items-center justify-center text-body-sm font-bold text-[var(--accu-gray-5)]">
+              <div key={day} className="flex h-[var(--accu-date-cell-size)] items-center justify-center accu-text-body-sm font-bold text-[var(--accu-gray-5)]">
                 {day}
               </div>
             ))}
@@ -133,7 +133,7 @@ export const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(function D
                   type="button"
                   disabled={!inCurrentMonth}
                   className={cn(
-                    'relative flex h-[var(--accu-date-cell-size)] w-[var(--accu-date-cell-size)] items-center justify-center border-[0.5px] text-body-md font-regular',
+                    'relative flex h-[var(--accu-date-cell-size)] w-[var(--accu-date-cell-size)] items-center justify-center border-[0.5px] accu-text-body-md font-normal',
                     inCurrentMonth ? 'cursor-pointer' : 'cursor-not-allowed',
                     isSelected
                       ? 'border-[var(--accu-primary-blue)] bg-[var(--accu-primary-blue)] text-[var(--accu-white)]'

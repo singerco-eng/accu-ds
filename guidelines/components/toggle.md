@@ -4,8 +4,8 @@
 
 **Import**:
 ```tsx
-import { Toggle } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { Toggle } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
 **Props**:

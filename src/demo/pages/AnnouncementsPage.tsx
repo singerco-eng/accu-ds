@@ -9,7 +9,7 @@ export default function AnnouncementsPage() {
 
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Announcements</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Announcements</h1>
       <div className="grid gap-4">
         {variants.flatMap((variant) =>
           contentTypes.map((typeLabel, index) => {

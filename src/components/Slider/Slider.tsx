@@ -12,11 +12,11 @@ export const Slider = forwardRef<HTMLDivElement, SliderProps>(function Slider(
 
   return (
     <div ref={ref} className={cn(labelPosition === 'left' ? 'flex items-center gap-4' : 'inline-flex flex-col gap-2', className)}>
-      {label ? <span className="text-body-md font-regular text-[var(--accu-gray-6)]">{label}</span> : null}
+      {label ? <span className="accu-text-body-md font-normal text-[var(--accu-gray-6)]">{label}</span> : null}
 
       <div className="relative h-[28px] w-[270px]">
         {showValue ? (
-          <span className="text-body-sm font-bold absolute -top-6 -translate-x-1/2" style={{ left: `${ratio}%` }}>
+          <span className="accu-text-body-sm font-bold absolute -top-6 -translate-x-1/2" style={{ left: `${ratio}%` }}>
             {valueText}
           </span>
         ) : null}

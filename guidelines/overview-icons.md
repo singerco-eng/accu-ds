@@ -4,7 +4,7 @@ AccuLynx Design System uses [Lucide React](https://lucide.dev/) for all icons. L
 
 ### Installation
 
-Lucide React is included as a dependency of `@acculynx/design-system`, so it is available automatically.
+Lucide React is included as a dependency of `@al-ds/design-system`, so it is available automatically.
 
 ### Usage Pattern
 

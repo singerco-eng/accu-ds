@@ -1,4 +1,4 @@
-This project has access to the AccuLynx Design System installed via the npm package `@acculynx/design-system`. Files in the guidelines directory show how to use the design system.
+This project has access to the AccuLynx Design System installed via the npm package `@al-ds/design-system`. Files in the guidelines directory show how to use the design system.
 
 Always read:
 - All files with a name that starts with `overview-`
@@ -11,18 +11,18 @@ Read the files in the `guidelines/components/` directory when you want to use th
 Every file that uses AccuLynx components must import the styles CSS once at the app root:
 
 ```tsx
-import '@acculynx/design-system/styles.css'
+import '@al-ds/design-system/styles.css'
 ```
 
 Then import components as needed:
 
 ```tsx
-import { Button, TextInput, Card } from '@acculynx/design-system'
+import { Button, TextInput, Card } from '@al-ds/design-system'
 ```
 
 ## Component Usage Guidelines - READ THIS FIRST
 
-IMPORTANT: Always prefer to use components from `@acculynx/design-system` if they exist. For example, prefer to use a Button component from the design system rather than a regular HTML button.
+IMPORTANT: Always prefer to use components from `@al-ds/design-system` if they exist. For example, prefer to use a Button component from the design system rather than a regular HTML button.
 
 IMPORTANT: Follow these steps IN ORDER before writing any code:
 
@@ -58,3 +58,11 @@ DO NOT write code using a component until you have read its specific guidelines.
 - Use the design system's spacing, border radius, and shadow tokens for consistency.
 - All components accept a `className` prop for extending styles via Tailwind.
 - All components forward refs and extend their base HTML element's props.
+
+## CSS Rules - READ THIS
+
+- The styles CSS is **self-contained**. It includes all Tailwind utility classes used by components. You do NOT need to install Tailwind separately.
+- Typography utility classes are namespaced with `accu-` prefix: use `accu-text-body-md`, NOT `text-body-md`. See design-tokens/typography.md for the full list.
+- Use standard Tailwind weight classes: `font-normal` (400), `font-medium` (500), `font-bold` (700). Do NOT use `font-regular`.
+- Do NOT add global CSS resets or base styles for `button`, `input`, or `label` elements. These will break component styling. If you must add base styles, wrap them in `@layer base` so they have lower cascade priority.
+- For a Tailwind v4 theme preset with shorthand classes, add: `@import "@al-ds/design-system/preset.css";`

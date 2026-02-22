@@ -1,11 +1,11 @@
-# @acculynx/design-system
+# @al-ds/design-system
 
 AccuLynx Design System — a React component library with design tokens, built from the AccuLynx Figma Master Design Library.
 
 ## Installation
 
 ```bash
-npm install @acculynx/design-system
+npm install @al-ds/design-system
 ```
 
 ### Peer Dependencies
@@ -21,17 +21,27 @@ npm install react react-dom
 Import components and the required CSS:
 
 ```tsx
-import { Button, Badge, Toggle } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { Button, Badge, Toggle } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
-The CSS import is required — it provides all design tokens (CSS custom properties) and component styles.
+The CSS import is required — it provides all design tokens (CSS custom properties), Tailwind utilities, and component styles. The CSS is fully self-contained; consumers do NOT need Tailwind installed.
+
+### Tailwind Preset (Optional)
+
+If your project uses Tailwind CSS v4, you can import the AccuLynx theme preset for shorthand token classes:
+
+```css
+@import "@al-ds/design-system/preset.css";
+```
+
+This enables classes like `bg-accu-primary-blue`, `rounded-accu-md`, `shadow-accu-lg` instead of `bg-[var(--accu-primary-blue)]`.
 
 ### Example
 
 ```tsx
-import { Button, TextInput, Card } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { Button, TextInput, Card } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 
 function LoginForm() {
   return (
@@ -82,21 +92,43 @@ function LoginForm() {
 All components use CSS custom properties prefixed with `--accu-*`. These are automatically included when you import the styles CSS. Tokens are also available as TypeScript objects:
 
 ```tsx
-import { colors, typography } from '@acculynx/design-system'
+import { colors, typography } from '@al-ds/design-system'
 ```
+
+### Typography Utility Classes
+
+The design system provides namespaced typography utilities (to avoid Tailwind class name conflicts):
+
+| Class | Size | Use |
+|-------|------|-----|
+| `accu-text-display-lg` | 42px | Large display headings |
+| `accu-text-display-md` | 30px | Medium display headings |
+| `accu-text-display-sm` | 18px | Small display headings |
+| `accu-text-body-lg` | 16px | Large body text |
+| `accu-text-body-md` | 14px | Default body text |
+| `accu-text-body-sm` | 12px | Small/caption text |
+
+Standard Tailwind font-weight classes (`font-light`, `font-normal`, `font-medium`, `font-bold`) work as expected.
+
+## CSS Notes
+
+- The styles CSS is **self-contained** — it includes all Tailwind utilities used by components. No need to install or configure Tailwind.
+- The CSS is not minified and ships with sourcemaps for easier debugging.
+- Components use CSS custom properties for all colors, radii, and effects. No hard-coded hex values.
+- If your project has base styles (e.g., Tailwind's preflight or global `button`/`input` resets), they may affect component internals. Use CSS layers (`@layer base`) for your global resets to ensure proper cascade ordering.
 
 ## Figma Make Integration
 
 This package is designed to work with [Figma Make](https://developers.figma.com/docs/code/bring-your-design-system-package/). To use it:
 
-1. Install the package in your Figma Make file (ask the AI chat: "install @acculynx/design-system")
+1. Install the package in your Figma Make file (ask the AI chat: "install @al-ds/design-system")
 2. Copy the `guidelines/` folder from this package into your Figma Make project's root
 3. Figma Make's AI will read the guidelines to understand how to use your components correctly
 
 The guidelines folder is included in the npm package. You can find it at:
 
 ```
-node_modules/@acculynx/design-system/guidelines/
+node_modules/@al-ds/design-system/guidelines/
 ```
 
 ### Guidelines Structure

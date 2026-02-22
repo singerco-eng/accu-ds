@@ -14,13 +14,13 @@ export default function TilesPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="mb-2 text-display-sm font-bold">Tiles</h1>
-        <p className="text-body-md text-[var(--accu-gray-5)]">Action tiles and milestone tiles from the Figma DS with actual SVG icons pulled from the Figma API.</p>
+        <h1 className="mb-2 accu-text-display-sm font-bold">Tiles</h1>
+        <p className="accu-text-body-md text-[var(--accu-gray-5)]">Action tiles and milestone tiles from the Figma DS with actual SVG icons pulled from the Figma API.</p>
       </div>
 
       {/* Action Item Tiles */}
       <section className="rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] p-[var(--accu-space-6)]">
-        <h2 className="mb-4 text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Action Tiles</h2>
+        <h2 className="mb-4 accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Action Tiles</h2>
         <div className="flex flex-wrap gap-[var(--accu-space-3)]">
           <Tile
             title="Submitted Financial"
@@ -57,7 +57,7 @@ export default function TilesPage() {
 
       {/* Milestone Tiles */}
       <section className="rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] p-[var(--accu-space-6)]">
-        <h2 className="mb-4 text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Milestone Tiles</h2>
+        <h2 className="mb-4 accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Milestone Tiles</h2>
         <div className="flex flex-wrap gap-[var(--accu-space-3)]">
           <MilestoneTile stage="lead" count="14" amount="–" />
           <MilestoneTile stage="prospect" count="11" amount="$12,772,909" />
@@ -73,8 +73,8 @@ export default function TilesPage() {
       {/* Pipeline Example (from screenshot) */}
       <section className="rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] p-[var(--accu-space-6)]">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-body-lg font-regular text-[var(--accu-gray-6)]">Current Pipeline</h2>
-          <span className="text-body-sm text-[var(--accu-gray-5)]">Active Jobs: 89</span>
+          <h2 className="accu-text-body-lg font-normal text-[var(--accu-gray-6)]">Current Pipeline</h2>
+          <span className="accu-text-body-sm text-[var(--accu-gray-5)]">Active Jobs: 89</span>
         </div>
         <div className="flex items-start justify-around">
           {pipelineData.map((item) => (
@@ -83,7 +83,7 @@ export default function TilesPage() {
               <span className="text-[20px] font-bold" style={{ color: milestoneColors[item.stage] }}>
                 {item.count}
               </span>
-              <span className="text-body-sm text-[var(--accu-gray-5)]">{item.amount}</span>
+              <span className="accu-text-body-sm text-[var(--accu-gray-5)]">{item.amount}</span>
             </div>
           ))}
         </div>
@@ -91,12 +91,12 @@ export default function TilesPage() {
 
       {/* All Milestone Icons */}
       <section className="rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] p-[var(--accu-space-6)]">
-        <h2 className="mb-4 text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Milestone Icon Reference</h2>
+        <h2 className="mb-4 accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Milestone Icon Reference</h2>
         <div className="flex flex-wrap gap-[var(--accu-space-4)]">
           {(['lead', 'prospect', 'approved', 'completed', 'invoice', 'unassigned', 'closed', 'cancelled'] as MilestoneStage[]).map((stage) => (
             <div key={stage} className="flex flex-col items-center gap-2">
               <MilestoneIcon stage={stage} size={48} />
-              <span className="text-body-sm font-bold capitalize" style={{ color: milestoneColors[stage] }}>{stage}</span>
+              <span className="accu-text-body-sm font-bold capitalize" style={{ color: milestoneColors[stage] }}>{stage}</span>
               <span className="text-[10px] text-[var(--accu-gray-4)]">{milestoneColors[stage]}</span>
             </div>
           ))}

@@ -35,11 +35,11 @@ export const Tile = forwardRef<HTMLButtonElement, ActionTileProps>(function Tile
           {count ?? '0'}
         </span>
         <div>
-          <p className={cn('text-[12px] font-regular', disabled ? 'text-[var(--accu-gray-4)]' : 'text-[var(--accu-gray-6)]')}>
+          <p className={cn('text-[12px] font-normal', disabled ? 'text-[var(--accu-gray-4)]' : 'text-[var(--accu-gray-6)]')}>
             {title}
           </p>
           {subtitle ? (
-            <p className={cn('text-[12px] font-regular', disabled ? 'text-[var(--accu-gray-4)]' : 'text-[var(--accu-gray-6)]')}>
+            <p className={cn('text-[12px] font-normal', disabled ? 'text-[var(--accu-gray-4)]' : 'text-[var(--accu-gray-6)]')}>
               {subtitle}
             </p>
           ) : null}
@@ -86,7 +86,7 @@ export const MilestoneTile = forwardRef<HTMLButtonElement, MilestoneTileProps>(f
           {count ?? '##'}
         </p>
         {amount ? (
-          <p className="text-[14px] font-regular leading-[16px] text-[var(--accu-gray-6)]">
+          <p className="text-[14px] font-normal leading-[16px] text-[var(--accu-gray-6)]">
             {amount}
           </p>
         ) : null}

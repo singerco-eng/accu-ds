@@ -41,7 +41,7 @@ export const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Toolti
         role="tooltip"
         className={cn(
           'pointer-events-none absolute z-30 w-max max-w-[300px] rounded-none border px-2 py-2 opacity-0 transition-opacity duration-150',
-          'text-body-sm font-regular',
+          'accu-text-body-sm font-normal',
           positionClasses[position],
           visible && 'opacity-100',
         )}

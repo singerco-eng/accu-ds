@@ -13,22 +13,22 @@ export default function CardsPage() {
   return (
     <div className="space-y-10">
       <div>
-        <h1 className="mb-2 text-display-sm font-bold">Cards</h1>
-        <p className="text-body-md text-[var(--accu-gray-5)]">
+        <h1 className="mb-2 accu-text-display-sm font-bold">Cards</h1>
+        <p className="accu-text-body-md text-[var(--accu-gray-5)]">
           Compound card component with Header, Title, Body, Footer, Media, and Divider sub-components.
         </p>
       </div>
 
       {/* Base Variants */}
       <section className="space-y-4">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Base Variants</h2>
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Base Variants</h2>
         <div className="grid gap-4 md:grid-cols-3">
           <Card>
             <Card.Header>
               <Card.Title title="Default" subtitle="Standard card with 1px #DCDCDC border" />
             </Card.Header>
             <Card.Body>
-              <p className="text-body-sm text-[var(--accu-gray-5)]">
+              <p className="accu-text-body-sm text-[var(--accu-gray-5)]">
                 The base card style used across AccuLynx. White background, 4px radius, subtle border.
               </p>
             </Card.Body>
@@ -43,7 +43,7 @@ export default function CardsPage() {
               <Card.Title title="Elevated" subtitle="Default + drop shadow" />
             </Card.Header>
             <Card.Body>
-              <p className="text-body-sm text-[var(--accu-gray-5)]">
+              <p className="accu-text-body-sm text-[var(--accu-gray-5)]">
                 Same as default but with a medium shadow for lifted emphasis.
               </p>
             </Card.Body>
@@ -57,7 +57,7 @@ export default function CardsPage() {
               <Card.Title title="Outlined" subtitle="Transparent bg, darker border" />
             </Card.Header>
             <Card.Body>
-              <p className="text-body-sm text-[var(--accu-gray-5)]">
+              <p className="accu-text-body-sm text-[var(--accu-gray-5)]">
                 Outlined variant with #9D9D9D border and no background fill.
               </p>
             </Card.Body>
@@ -67,14 +67,14 @@ export default function CardsPage() {
 
       {/* Interactive Cards */}
       <section className="space-y-4">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Interactive Cards</h2>
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Interactive Cards</h2>
         <div className="grid gap-4 md:grid-cols-3">
           <Card interactive onClick={() => alert('Card clicked!')}>
             <Card.Header>
               <Card.Title title="Clickable Card" subtitle="Hover for shadow, Enter/Space to activate" />
             </Card.Header>
             <Card.Body>
-              <p className="text-body-sm text-[var(--accu-gray-5)]">
+              <p className="accu-text-body-sm text-[var(--accu-gray-5)]">
                 This card has hover shadow and focus-visible ring. It's keyboard accessible.
               </p>
             </Card.Body>
@@ -85,7 +85,7 @@ export default function CardsPage() {
               <Card.Title title="Elevated + Interactive" subtitle="Combined variant" />
             </Card.Header>
             <Card.Body>
-              <p className="text-body-sm text-[var(--accu-gray-5)]">
+              <p className="accu-text-body-sm text-[var(--accu-gray-5)]">
                 Elevated cards with interactivity get a stronger hover shadow transition.
               </p>
             </Card.Body>
@@ -96,7 +96,7 @@ export default function CardsPage() {
               <Card.Title title="Semantic Element" subtitle="Rendered as <article>" />
             </Card.Header>
             <Card.Body>
-              <p className="text-body-sm text-[var(--accu-gray-5)]">
+              <p className="accu-text-body-sm text-[var(--accu-gray-5)]">
                 Use the <code className="rounded bg-[var(--accu-gray-1)] px-1 text-[var(--accu-gray-6)]">as</code> prop for semantic HTML.
               </p>
             </Card.Body>
@@ -106,8 +106,8 @@ export default function CardsPage() {
 
       {/* Selected / Job Card Pattern */}
       <section className="space-y-4">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Selected State (Job/Lead Card)</h2>
-        <p className="text-body-sm text-[var(--accu-gray-5)]">
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Selected State (Job/Lead Card)</h2>
+        <p className="accu-text-body-sm text-[var(--accu-gray-5)]">
           Click a card to toggle selection. Selected cards get a 3px orange left bar, peach background, and orange border.
         </p>
         <div className="flex flex-col gap-3" style={{ maxWidth: 460 }}>
@@ -138,11 +138,11 @@ export default function CardsPage() {
                   </div>
                   <div className="flex flex-1 items-start justify-between p-[var(--accu-space-4)]">
                     <div className="min-w-0">
-                      <p className="truncate text-body-md font-bold text-[var(--accu-gray-6)]">{job.name}</p>
-                      <p className="mt-0.5 flex items-center gap-1 text-body-sm text-[var(--accu-gray-4)]">
+                      <p className="truncate accu-text-body-md font-bold text-[var(--accu-gray-6)]">{job.name}</p>
+                      <p className="mt-0.5 flex items-center gap-1 accu-text-body-sm text-[var(--accu-gray-4)]">
                         <MapPin className="h-3 w-3 shrink-0" /> {job.address}
                       </p>
-                      <p className="mt-2 text-body-sm text-[var(--accu-gray-5)]">{job.status}</p>
+                      <p className="mt-2 accu-text-body-sm text-[var(--accu-gray-5)]">{job.status}</p>
                     </div>
                     <Badge variant={job.badge}>{job.badgeText}</Badge>
                   </div>
@@ -155,7 +155,7 @@ export default function CardsPage() {
 
       {/* Header with Actions */}
       <section className="space-y-4">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Header + Action Slot</h2>
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Header + Action Slot</h2>
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
             <Card.Header
@@ -172,17 +172,17 @@ export default function CardsPage() {
               <div className="flex items-center gap-[var(--accu-space-3)]">
                 <Avatar initials="AL" size={32} />
                 <div>
-                  <p className="flex items-center gap-2 text-body-sm text-[var(--accu-gray-5)]">
+                  <p className="flex items-center gap-2 accu-text-body-sm text-[var(--accu-gray-5)]">
                     <Mail className="h-3.5 w-3.5" /> alex.lee@acculynx.com
                   </p>
-                  <p className="flex items-center gap-2 text-body-sm text-[var(--accu-gray-5)]">
+                  <p className="flex items-center gap-2 accu-text-body-sm text-[var(--accu-gray-5)]">
                     <Phone className="h-3.5 w-3.5" /> (312) 555-0198
                   </p>
                 </div>
               </div>
             </Card.Body>
             <Card.Footer divider align="between">
-              <span className="text-body-sm text-[var(--accu-gray-4)]">Added 3 days ago</span>
+              <span className="accu-text-body-sm text-[var(--accu-gray-4)]">Added 3 days ago</span>
               <Button variant="text">View Profile</Button>
             </Card.Footer>
           </Card>
@@ -195,7 +195,7 @@ export default function CardsPage() {
               <Card.Title title="Insurance Details" subtitle="State Farm - Policy #8821934" />
             </Card.Header>
             <Card.Body>
-              <div className="space-y-2 text-body-sm text-[var(--accu-gray-5)]">
+              <div className="space-y-2 accu-text-body-sm text-[var(--accu-gray-5)]">
                 <p><span className="font-bold text-[var(--accu-gray-6)]">Adjuster:</span> Sarah Johnson</p>
                 <p><span className="font-bold text-[var(--accu-gray-6)]">Claim #:</span> CLM-2026-4412</p>
                 <p><span className="font-bold text-[var(--accu-gray-6)]">Deductible:</span> $1,000</p>
@@ -207,7 +207,7 @@ export default function CardsPage() {
 
       {/* Scrollable Body */}
       <section className="space-y-4">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Scrollable Body</h2>
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Scrollable Body</h2>
         <div style={{ maxWidth: 400 }}>
           <Card>
             <Card.Header divider>
@@ -226,8 +226,8 @@ export default function CardsPage() {
                   <div key={i} className="flex items-start gap-[var(--accu-space-2)]">
                     <entry.icon className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accu-gray-4)]" />
                     <div className="min-w-0 flex-1">
-                      <p className="text-body-sm text-[var(--accu-gray-6)]">{entry.text}</p>
-                      <p className="text-body-sm text-[var(--accu-gray-4)]">{entry.time}</p>
+                      <p className="accu-text-body-sm text-[var(--accu-gray-6)]">{entry.text}</p>
+                      <p className="accu-text-body-sm text-[var(--accu-gray-4)]">{entry.time}</p>
                     </div>
                   </div>
                 ))}
@@ -239,7 +239,7 @@ export default function CardsPage() {
 
       {/* Media Card */}
       <section className="space-y-4">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Media Slot</h2>
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Media Slot</h2>
         <div className="grid gap-4 md:grid-cols-3">
           <Card>
             <Card.Media height={140}>
@@ -251,7 +251,7 @@ export default function CardsPage() {
               <Card.Title title="1234 Elm Street" subtitle="Chicago, IL 60614" />
             </Card.Header>
             <Card.Body>
-              <p className="text-body-sm text-[var(--accu-gray-5)]">Residential - Single Family</p>
+              <p className="accu-text-body-sm text-[var(--accu-gray-5)]">Residential - Single Family</p>
             </Card.Body>
           </Card>
 
@@ -273,7 +273,7 @@ export default function CardsPage() {
           <Card variant="elevated">
             <Card.Media height={140}>
               <div className="flex h-full items-center justify-center bg-gradient-to-br from-[var(--accu-logo-orange)] to-[var(--accu-primary-orange)]">
-                <span className="text-display-md font-light text-white/80">AL</span>
+                <span className="accu-text-display-md font-light text-white/80">AL</span>
               </div>
             </Card.Media>
             <Card.Header>
@@ -285,7 +285,7 @@ export default function CardsPage() {
 
       {/* Divider usage */}
       <section className="space-y-4">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Divider & Composition</h2>
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Divider & Composition</h2>
         <div style={{ maxWidth: 400 }}>
           <Card>
             <Card.Header>
@@ -293,7 +293,7 @@ export default function CardsPage() {
             </Card.Header>
             <Card.Divider />
             <Card.Body>
-              <div className="space-y-2 text-body-sm">
+              <div className="space-y-2 accu-text-body-sm">
                 <div className="flex justify-between">
                   <span className="text-[var(--accu-gray-5)]">Materials</span>
                   <span className="font-bold text-[var(--accu-gray-6)]">$4,200.00</span>
@@ -310,8 +310,8 @@ export default function CardsPage() {
             </Card.Body>
             <Card.Divider />
             <Card.Footer align="between">
-              <span className="text-body-md font-bold text-[var(--accu-gray-6)]">Total</span>
-              <span className="text-body-lg font-bold text-[var(--accu-logo-orange)]">$9,200.00</span>
+              <span className="accu-text-body-md font-bold text-[var(--accu-gray-6)]">Total</span>
+              <span className="accu-text-body-lg font-bold text-[var(--accu-logo-orange)]">$9,200.00</span>
             </Card.Footer>
           </Card>
         </div>
@@ -319,11 +319,11 @@ export default function CardsPage() {
 
       {/* Padding Variants */}
       <section className="space-y-4">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Padding Variants</h2>
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Padding Variants</h2>
         <div className="grid gap-4 md:grid-cols-4">
           {(['none', 'sm', 'md', 'lg'] as const).map((p) => (
             <Card key={p} padding={p}>
-              <div className="bg-[var(--accu-light-blue)] p-2 text-center text-body-sm text-[var(--accu-gray-6)]">
+              <div className="bg-[var(--accu-light-blue)] p-2 text-center accu-text-body-sm text-[var(--accu-gray-6)]">
                 padding=&quot;{p}&quot;
               </div>
             </Card>

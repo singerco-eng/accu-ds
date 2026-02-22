@@ -3,13 +3,14 @@ import { cn } from '../../lib/utils'
 import { type RadioButtonProps } from './RadioButton.types'
 
 export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(function RadioButton(
-  { className, label, checked, disabled, id, ...props },
+  { className, label, checked, defaultChecked, disabled, id, ...props },
   ref,
 ) {
   const generatedId = useId()
   const inputId = id ?? generatedId
   const [focused, setFocused] = useState(false)
-  const isChecked = Boolean(checked)
+  const isControlled = checked !== undefined
+  const isChecked = isControlled ? Boolean(checked) : Boolean(defaultChecked)
 
   const strokeColor = disabled
     ? 'var(--accu-disabled-orange)'
@@ -31,7 +32,7 @@ export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(functi
           id={inputId}
           ref={ref}
           type="radio"
-          checked={checked}
+          {...(isControlled ? { checked: Boolean(checked) } : { defaultChecked })}
           disabled={disabled}
           className="peer sr-only"
           onFocus={() => setFocused(true)}
@@ -49,7 +50,7 @@ export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(functi
           />
         </span>
       </span>
-      {label ? <span className="text-body-md font-regular text-[var(--accu-gray-6)]">{label}</span> : null}
+      {label ? <span className="accu-text-body-md font-normal text-[var(--accu-gray-6)]">{label}</span> : null}
     </label>
   )
 })

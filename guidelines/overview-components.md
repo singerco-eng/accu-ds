@@ -1,6 +1,6 @@
 ## Components
 
-Always prefer components from the `@acculynx/design-system` package (imported from `@acculynx/design-system`) if they are available. Each component has a guidelines file that contains helpful examples and additional context. You must follow all relevant instructions.
+Always prefer components from the `@al-ds/design-system` package (imported from `@al-ds/design-system`) if they are available. Each component has a guidelines file that contains helpful examples and additional context. You must follow all relevant instructions.
 
 Here are the guidelines files and descriptions for the AccuLynx components:
 
@@ -53,8 +53,29 @@ Most AccuLynx components accept these common props:
 ### Controlled vs Uncontrolled
 
 - **Controlled**: Component receives `value`/`checked` and `onChange`/`onCheckedChange` props
-- **Uncontrolled**: Component manages its own state with optional `defaultValue`
+- **Uncontrolled**: Component manages its own state with optional `defaultValue`/`defaultChecked`
 - Prefer controlled components for form data that needs to be submitted or validated
+- Toggle and RadioButton support both controlled (`checked` prop) and uncontrolled (`defaultChecked` prop) patterns
+
+### onChange Signatures — READ THIS CAREFULLY
+
+Components use different `onChange` signatures depending on their type. You MUST check the specific component's guidelines before wiring up event handlers.
+
+| Component | Prop | Receives | Example |
+|-----------|------|----------|---------|
+| TextInput | `onChange` | `React.ChangeEvent<HTMLInputElement>` | `(e) => setValue(e.target.value)` |
+| Checkbox | `onChange` | `React.ChangeEvent<HTMLInputElement>` | `(e) => setChecked(e.target.checked)` |
+| RadioButton | `onChange` | `React.ChangeEvent<HTMLInputElement>` | `(e) => setSelected(e.target.value)` |
+| Toggle | `onCheckedChange` | `boolean` | `(checked) => setEnabled(checked)` |
+| SelectMenu | `onChange` | `string \| string[]` | `(value) => setSelected(value)` |
+| SearchBar | `onChange` | `string` | `(query) => setSearch(query)` |
+| Slider | `onChange` | `number` | `(value) => setSlider(value)` |
+| DatePicker | `onChange` | `Date` | `(date) => setDate(date)` |
+
+**Key differences:**
+- TextInput, Checkbox, RadioButton pass React **events** — use `e.target.value` or `e.target.checked`
+- Toggle uses `onCheckedChange` (not `onChange`) and passes a **boolean** directly
+- SelectMenu, SearchBar, Slider, DatePicker pass **raw values** directly (no event wrapper)
 
 ### Form Components
 

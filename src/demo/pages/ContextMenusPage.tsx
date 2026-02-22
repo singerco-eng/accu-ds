@@ -5,14 +5,14 @@ export default function ContextMenusPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="mb-2 text-display-sm font-bold">Context Menus</h1>
-        <p className="text-body-md text-[var(--accu-gray-5)]">
+        <h1 className="mb-2 accu-text-display-sm font-bold">Context Menus</h1>
+        <p className="accu-text-body-md text-[var(--accu-gray-5)]">
           3-dot trigger with 200px dropdown, blue text, 24px icons, and divider rows.
         </p>
       </div>
 
       <section className="rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] p-[var(--accu-space-6)]">
-        <h2 className="mb-4 text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Default Menu</h2>
+        <h2 className="mb-4 accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Default Menu</h2>
         <ContextMenu
           items={[
             { label: 'Edit', onClick: () => {}, icon: <Pencil className="h-6 w-6" /> },

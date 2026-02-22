@@ -4,8 +4,8 @@
 
 **Import**:
 ```tsx
-import { Badge } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { Badge } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
 **Props**:

@@ -21,7 +21,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(function Panel(
         )}
         style={{ height: 'var(--accu-panel-header-height)' }}
       >
-        <span className="px-[var(--accu-space-4)] text-body-md font-bold text-[var(--accu-gray-6)]">{title}</span>
+        <span className="px-[var(--accu-space-4)] accu-text-body-md font-bold text-[var(--accu-gray-6)]">{title}</span>
         <span
           className="flex h-full items-center justify-center gap-[var(--accu-space-2)] border-l border-[var(--accu-gray-2)] px-[var(--accu-space-2)] text-[var(--accu-gray-6)]"
           style={{ width: 'var(--accu-panel-action-width)' }}

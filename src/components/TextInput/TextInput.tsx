@@ -53,7 +53,7 @@ export const TextInput = forwardRef<HTMLInputElement | HTMLTextAreaElement, Text
   const requiredEmpty = Boolean(required && !focused && !hasValue && !hasError)
 
   const fieldClass = cn(
-    'text-body-lg w-full border border-transparent px-[10px] pb-1 pt-[23px] text-[var(--accu-input-text)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50',
+    'accu-text-body-lg w-full border border-transparent px-[10px] pb-1 pt-[23px] text-[var(--accu-input-text)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50',
     rightAdornment && 'pr-10',
     hideNativeValueText && 'text-transparent',
     multiline ? 'min-h-[50px] resize-y' : 'h-[50px]',
@@ -72,7 +72,7 @@ export const TextInput = forwardRef<HTMLInputElement | HTMLTextAreaElement, Text
             htmlFor={inputId}
             className={cn(
               'pointer-events-none absolute left-[10px] text-[var(--accu-gray-4)] transition-all duration-200 ease-out',
-              isFloating ? 'top-1 text-body-md' : 'top-4 text-body-lg',
+              isFloating ? 'top-1 accu-text-body-md' : 'top-4 accu-text-body-lg',
             )}
           >
             {floatingLabelText}
@@ -136,7 +136,7 @@ export const TextInput = forwardRef<HTMLInputElement | HTMLTextAreaElement, Text
         )}
       </div>
       {error ? (
-        <p className="text-body-sm mt-1" style={{ color: 'var(--accu-red)' }}>
+        <p className="accu-text-body-sm mt-1" style={{ color: 'var(--accu-red)' }}>
           {error}
         </p>
       ) : null}

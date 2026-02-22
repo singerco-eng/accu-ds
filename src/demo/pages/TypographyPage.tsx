@@ -31,7 +31,7 @@ function Specimen({
 }) {
   return (
     <article className="mb-6">
-      <p className="text-body-sm font-bold mb-2">{label}</p>
+      <p className="accu-text-body-sm font-bold mb-2">{label}</p>
       <p
         style={{
           fontFamily: typography.fontFamily,
@@ -44,7 +44,7 @@ function Specimen({
       >
         {sampleText}
       </p>
-      <p className="text-body-sm font-regular mt-1" style={{ color: 'var(--accu-gray-4)' }}>
+      <p className="accu-text-body-sm font-normal mt-1" style={{ color: 'var(--accu-gray-4)' }}>
         {`Roboto / ${fontSize} / line-height ${lineHeight} / weight ${weight}`}
       </p>
     </article>
@@ -54,7 +54,7 @@ function Specimen({
 function ScaleSection({ title, specimens, prefix }: { title: string; specimens: ScaleSpecimen[]; prefix: string }) {
   return (
     <section className="mb-10">
-      <h2 className="text-display-sm font-bold mb-4">{title}</h2>
+      <h2 className="accu-text-display-sm font-bold mb-4">{title}</h2>
       {specimens.flatMap((specimen) =>
         specimen.weights.map((entry) => (
           <Specimen
@@ -139,13 +139,13 @@ export default function TypographyPage() {
 
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Typography</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Typography</h1>
 
       <ScaleSection title="Display Scale" specimens={displaySpecimens} prefix="Display" />
       <ScaleSection title="Body Scale" specimens={bodySpecimens} prefix="Body" />
 
       <section className="mb-10">
-        <h2 className="text-display-sm font-bold mb-4">Custom Styles</h2>
+        <h2 className="accu-text-display-sm font-bold mb-4">Custom Styles</h2>
 
         <Specimen
           label="Custom / Modal Title / Thin 100"

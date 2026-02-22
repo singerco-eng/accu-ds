@@ -8,13 +8,13 @@ const radiusTokens = [
 export default function EffectsPage() {
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Effects</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Effects</h1>
 
       <section className="mb-10">
-        <h2 className="text-display-sm font-bold mb-4">Text &amp; Input Field Focus Shadow</h2>
+        <h2 className="accu-text-display-sm font-bold mb-4">Text &amp; Input Field Focus Shadow</h2>
         <div className="flex flex-wrap gap-4 mb-3">
           <input
-            className="text-body-md px-3 py-2"
+            className="accu-text-body-md px-3 py-2"
             style={{
               border: '1px solid var(--accu-gray-3)',
               borderRadius: 'var(--accu-radius-md)',
@@ -25,7 +25,7 @@ export default function EffectsPage() {
             readOnly
           />
           <input
-            className="text-body-md px-3 py-2"
+            className="accu-text-body-md px-3 py-2"
             style={{
               border: '1px solid var(--accu-gray-3)',
               borderRadius: 'var(--accu-radius-md)',
@@ -37,13 +37,13 @@ export default function EffectsPage() {
             readOnly
           />
         </div>
-        <p className="text-body-sm font-regular" style={{ color: 'var(--accu-gray-5)' }}>
+        <p className="accu-text-body-sm font-normal" style={{ color: 'var(--accu-gray-5)' }}>
           box-shadow: var(--accu-focus-ring)
         </p>
       </section>
 
       <section>
-        <h2 className="text-display-sm font-bold mb-4">Border Radius Scale</h2>
+        <h2 className="accu-text-display-sm font-bold mb-4">Border Radius Scale</h2>
         <div className="flex flex-wrap gap-4">
           {radiusTokens.map((token) => (
             <div key={token.name} className="w-28">
@@ -55,7 +55,7 @@ export default function EffectsPage() {
                   background: 'var(--accu-light-blue)',
                 }}
               />
-              <p className="text-body-sm font-bold">{token.name}</p>
+              <p className="accu-text-body-sm font-bold">{token.name}</p>
             </div>
           ))}
         </div>

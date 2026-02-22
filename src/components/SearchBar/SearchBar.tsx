@@ -35,7 +35,7 @@ export const SearchBar = forwardRef<HTMLInputElement, SearchBarProps>(function S
         onKeyDown={(event) => {
           if (event.key === 'Enter') onSearch?.(value)
         }}
-        className="ml-[var(--accu-space-2)] w-full flex-1 bg-transparent text-body-md font-regular text-[var(--accu-gray-6)] outline-none"
+        className="ml-[var(--accu-space-2)] w-full flex-1 bg-transparent accu-text-body-md font-normal text-[var(--accu-gray-6)] outline-none"
         placeholder={placeholder}
       />
 

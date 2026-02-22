@@ -22,7 +22,7 @@ export default function ToastsPage() {
 
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Toasts</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Toasts</h1>
       <div className="flex flex-wrap gap-3">
         <Button variant="success" onClick={() => createToast('confirmation', 'Your changes were saved successfully.')}>
           Show Confirmation Toast

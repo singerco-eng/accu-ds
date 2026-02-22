@@ -1,6 +1,6 @@
 {
-  "name": "@acculynx/design-system",
-  "version": "1.0.0",
+  "name": "@al-ds/design-system",
+  "version": "1.1.0",
   "type": "module",
   "description": "AccuLynx Design System — React component library with design tokens, built from Figma",
   "main": "dist/index.cjs",
@@ -17,10 +17,12 @@
         "default": "./dist/index.cjs"
       }
     },
-    "./styles.css": "./dist/design-system.css"
+    "./styles.css": "./dist/design-system.css",
+    "./preset.css": "./src/tailwind-preset.css"
   },
   "files": [
     "dist",
+    "src/tailwind-preset.css",
     "guidelines",
     "README.md"
   ],

@@ -106,15 +106,15 @@ export default function TablesPage() {
   return (
     <div className="space-y-10">
       <div>
-        <h1 className="mb-2 text-display-sm font-bold">Tables</h1>
-        <p className="text-body-md text-[var(--accu-gray-5)]">
+        <h1 className="mb-2 accu-text-display-sm font-bold">Tables</h1>
+        <p className="accu-text-body-md text-[var(--accu-gray-5)]">
           Table component with tabs, sortable columns, and styled headers matching Figma.
         </p>
       </div>
 
       {/* Figma-matching example: Tabs + Table */}
       <section>
-        <h2 className="mb-3 text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Table Tabs + Data Table</h2>
+        <h2 className="mb-3 accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Table Tabs + Data Table</h2>
         <div className="overflow-hidden rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)]">
           <TableTabs tabs={invoiceTabs} activeTab={activeTab} onTabChange={setActiveTab} />
           <Table
@@ -126,7 +126,7 @@ export default function TablesPage() {
             onSort={handleSort}
           />
           {tabData.length === 0 ? (
-            <div className="flex h-[120px] items-center justify-center text-body-md text-[var(--accu-gray-4)]">
+            <div className="flex h-[120px] items-center justify-center accu-text-body-md text-[var(--accu-gray-4)]">
               No records found.
             </div>
           ) : null}
@@ -135,7 +135,7 @@ export default function TablesPage() {
 
       {/* Contacts table – sortable, clickable */}
       <section>
-        <h2 className="mb-3 text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Sortable Contact Table</h2>
+        <h2 className="mb-3 accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Sortable Contact Table</h2>
         <Table
           columns={contactColumns}
           data={sortedContacts}

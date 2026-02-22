@@ -4,8 +4,8 @@
 
 **Import**:
 ```tsx
-import { Panel } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { Panel } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
 **Props**:

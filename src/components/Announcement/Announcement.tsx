@@ -72,11 +72,11 @@ export const Announcement = forwardRef<HTMLDivElement, AnnouncementProps>(functi
             <Icon className="h-6 w-6" style={{ color: variantStyles[variant].iconColor }} />
           </span>
           <div className="flex-1">
-            <p className="text-body-md font-bold" style={{ color: styles.title }}>
+            <p className="accu-text-body-md font-bold" style={{ color: styles.title }}>
               {title}
             </p>
             {message ? (
-              <p className="text-body-md font-regular mt-1" style={{ color: 'var(--accu-gray-6)' }}>
+              <p className="accu-text-body-md font-normal mt-1" style={{ color: 'var(--accu-gray-6)' }}>
                 {message}
               </p>
             ) : null}

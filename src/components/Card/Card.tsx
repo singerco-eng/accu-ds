@@ -106,8 +106,8 @@ function CardHeader({ className, children, action, divider = false, ...props }: 
 function CardTitle({ title, subtitle, children, className, ...props }: CardTitleProps) {
   return (
     <div className={cn('min-w-0', className)} {...props}>
-      <h3 className="truncate text-body-lg font-bold text-[var(--accu-gray-6)]">{title}</h3>
-      {subtitle ? <p className="mt-0.5 truncate text-body-sm text-[var(--accu-gray-4)]">{subtitle}</p> : null}
+      <h3 className="truncate accu-text-body-lg font-bold text-[var(--accu-gray-6)]">{title}</h3>
+      {subtitle ? <p className="mt-0.5 truncate accu-text-body-sm text-[var(--accu-gray-4)]">{subtitle}</p> : null}
       {children}
     </div>
   )

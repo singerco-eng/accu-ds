@@ -1,0 +1,72 @@
+/*
+ * AccuLynx Design System — Tailwind v4 Theme Preset
+ *
+ * Import this in your project's CSS to get shorthand Tailwind classes
+ * for all AccuLynx design tokens. Instead of writing:
+ *   bg-[var(--accu-primary-blue)]
+ * You can write:
+ *   bg-accu-primary-blue
+ *
+ * Usage:
+ *   @import "@al-ds/design-system/preset.css";
+ */
+
+@theme {
+  /* Primary */
+  --color-accu-primary-blue: var(--accu-primary-blue);
+  --color-accu-primary-orange: var(--accu-primary-orange);
+
+  /* Grays */
+  --color-accu-white: var(--accu-white);
+  --color-accu-gray-0: var(--accu-gray-0);
+  --color-accu-gray-1: var(--accu-gray-1);
+  --color-accu-gray-2: var(--accu-gray-2);
+  --color-accu-gray-3: var(--accu-gray-3);
+  --color-accu-gray-4: var(--accu-gray-4);
+  --color-accu-gray-5: var(--accu-gray-5);
+  --color-accu-gray-6: var(--accu-gray-6);
+  --color-accu-black: var(--accu-black);
+  --color-accu-gray-bg: var(--accu-gray-bg);
+
+  /* Secondary */
+  --color-accu-yellow: var(--accu-yellow);
+  --color-accu-red: var(--accu-red);
+  --color-accu-green: var(--accu-green);
+  --color-accu-dark-green: var(--accu-dark-green);
+  --color-accu-purple: var(--accu-purple);
+  --color-accu-cyan: var(--accu-cyan);
+  --color-accu-gray-blue: var(--accu-gray-blue);
+  --color-accu-gold: var(--accu-gold);
+  --color-accu-blue-dark: var(--accu-blue-dark);
+
+  /* Light Tints */
+  --color-accu-light-red: var(--accu-light-red);
+  --color-accu-light-blue: var(--accu-light-blue);
+  --color-accu-light-cyan: var(--accu-light-cyan);
+  --color-accu-light-green: var(--accu-light-green);
+  --color-accu-light-purple: var(--accu-light-purple);
+  --color-accu-light-orange: var(--accu-light-orange);
+
+  /* Border Radius */
+  --radius-accu-sm: var(--accu-radius-sm);
+  --radius-accu-md: var(--accu-radius-md);
+  --radius-accu-lg: var(--accu-radius-lg);
+  --radius-accu-full: var(--accu-radius-full);
+
+  /* Spacing */
+  --spacing-accu-1: var(--accu-space-1);
+  --spacing-accu-2: var(--accu-space-2);
+  --spacing-accu-3: var(--accu-space-3);
+  --spacing-accu-4: var(--accu-space-4);
+  --spacing-accu-5: var(--accu-space-5);
+  --spacing-accu-6: var(--accu-space-6);
+  --spacing-accu-8: var(--accu-space-8);
+  --spacing-accu-10: var(--accu-space-10);
+  --spacing-accu-12: var(--accu-space-12);
+
+  /* Shadows */
+  --shadow-accu-md: var(--accu-shadow-md);
+  --shadow-accu-lg: var(--accu-shadow-lg);
+  --shadow-accu-xl: var(--accu-shadow-xl);
+  --shadow-accu-focus: var(--accu-focus-ring);
+}

@@ -37,7 +37,7 @@ export const Toast = forwardRef<HTMLDivElement, ToastProps>(function Toast(
           <Check className="h-6 w-6 text-white" strokeWidth={3} />
         </div>
         <div className="flex w-[300px] items-center px-4">
-          <p className="text-body-md font-regular">{message}</p>
+          <p className="accu-text-body-md font-normal">{message}</p>
         </div>
       </div>
     </div>

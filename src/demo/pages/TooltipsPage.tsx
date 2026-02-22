@@ -4,7 +4,7 @@ import { Tooltip } from '../../components/Tooltip'
 export default function TooltipsPage() {
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Tooltips</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Tooltips</h1>
       <div className="grid gap-6">
         <div className="flex flex-wrap gap-6">
           <Tooltip content="Top tooltip content" position="top">

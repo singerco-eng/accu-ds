@@ -7,12 +7,12 @@ export default function FileUploaderPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="mb-2 text-display-sm font-bold">File Uploader</h1>
-        <p className="text-body-md text-[var(--accu-gray-5)]">Solid-border dropzone with image previews and file list.</p>
+        <h1 className="mb-2 accu-text-display-sm font-bold">File Uploader</h1>
+        <p className="accu-text-body-md text-[var(--accu-gray-5)]">Solid-border dropzone with image previews and file list.</p>
       </div>
 
       <section className="space-y-4 rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] p-[var(--accu-space-6)]">
-        <h2 className="text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Dropzone</h2>
+        <h2 className="accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Dropzone</h2>
         <FileUploader
           accept="image/*,.pdf"
           multiple
@@ -20,7 +20,7 @@ export default function FileUploaderPage() {
             setCount(files.length)
           }}
         />
-        <p className="text-body-sm text-[var(--accu-gray-5)]">Selected files: {count}</p>
+        <p className="accu-text-body-sm text-[var(--accu-gray-5)]">Selected files: {count}</p>
       </section>
     </div>
   )

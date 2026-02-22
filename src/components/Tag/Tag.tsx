@@ -18,7 +18,7 @@ export const Tag = forwardRef<HTMLSpanElement, TagProps>(function Tag(
       ref={ref}
       className={cn(
         'inline-flex items-center gap-1 px-1.5 py-1 text-white',
-        weight === 'regular' ? 'font-regular' : 'font-light',
+        weight === 'regular' ? 'font-normal' : 'font-light',
         getVariantClasses(variant),
         className,
       )}

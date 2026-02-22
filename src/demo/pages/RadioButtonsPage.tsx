@@ -6,7 +6,7 @@ export default function RadioButtonsPage() {
 
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Radio Buttons</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Radio Buttons</h1>
 
       <section className="mb-8">
         <h2

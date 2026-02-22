@@ -17,7 +17,7 @@ export function TableTabs({ tabs, activeTab, onTabChange, className }: TableTabs
               'relative flex h-[42px] items-center gap-1.5 px-[var(--accu-space-3)] text-[14px] transition-colors',
               isActive
                 ? 'border-t-[2px] border-t-[var(--accu-blue-dark)] bg-[var(--accu-white)] font-bold text-[var(--accu-blue-dark)]'
-                : 'bg-[var(--accu-gray-0)] font-regular text-[var(--accu-primary-blue)] hover:bg-[var(--accu-gray-1)]',
+                : 'bg-[var(--accu-gray-0)] font-normal text-[var(--accu-primary-blue)] hover:bg-[var(--accu-gray-1)]',
             )}
           >
             <span>{tab.label}</span>
@@ -56,7 +56,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(function Table(
                   key={column.key}
                   scope="col"
                   className={cn(
-                    'bg-[var(--accu-gray-1)] text-left align-middle text-[10px] uppercase leading-[10px] font-regular text-[var(--accu-gray-6)]',
+                    'bg-[var(--accu-gray-1)] text-left align-middle text-[10px] uppercase leading-[10px] font-normal text-[var(--accu-gray-6)]',
                     column.sortable && 'cursor-pointer hover:bg-[var(--accu-gray-2)]',
                   )}
                   style={{
@@ -105,7 +105,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(function Table(
                 return (
                   <td
                     key={column.key}
-                    className="align-middle text-body-md font-regular text-[var(--accu-gray-6)]"
+                    className="align-middle accu-text-body-md font-normal text-[var(--accu-gray-6)]"
                     style={{ padding: 'var(--accu-table-cell-pad-y) var(--accu-table-cell-pad-x)' }}
                   >
                     {column.render ? (

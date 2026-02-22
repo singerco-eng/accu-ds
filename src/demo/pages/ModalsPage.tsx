@@ -10,12 +10,12 @@ export default function ModalsPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="mb-2 text-display-sm font-bold">Modals</h1>
-        <p className="text-body-md text-[var(--accu-gray-5)]">Popup modal sizes from Figma with header/body/footer slots.</p>
+        <h1 className="mb-2 accu-text-display-sm font-bold">Modals</h1>
+        <p className="accu-text-body-md text-[var(--accu-gray-5)]">Popup modal sizes from Figma with header/body/footer slots.</p>
       </div>
 
       <section className="rounded-[var(--accu-radius-md)] border border-[var(--accu-gray-2)] bg-[var(--accu-white)] p-[var(--accu-space-6)]">
-        <h2 className="mb-4 text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Modal Sizes</h2>
+        <h2 className="mb-4 accu-text-body-sm font-bold uppercase text-[var(--accu-gray-4)]">Modal Sizes</h2>
         <div className="flex flex-wrap gap-[var(--accu-space-3)]">
           <Button onClick={() => setActive('sm')}>Open Small (650)</Button>
           <Button onClick={() => setActive('lg')}>Open Large (950)</Button>
@@ -39,11 +39,11 @@ export default function ModalsPage() {
         }
       >
         <div className="space-y-3">
-          <p className="text-body-md text-[var(--accu-gray-6)]">
+          <p className="accu-text-body-md text-[var(--accu-gray-6)]">
             Modal body is scrollable with a fixed Figma header/footer structure.
           </p>
           {Array.from({ length: 8 }).map((_, index) => (
-            <p key={index} className="text-body-sm text-[var(--accu-gray-5)]">
+            <p key={index} className="accu-text-body-sm text-[var(--accu-gray-5)]">
               Sample content row {index + 1}
             </p>
           ))}

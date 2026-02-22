@@ -25,35 +25,35 @@ export default function TabsPage() {
 
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Tabs</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Tabs</h1>
       <div className="grid gap-8">
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Tabbed Cards - 3 Tabs</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Tabbed Cards - 3 Tabs</h2>
           <Tabs items={threeTabs} activeId={underlineThree} onChange={setUnderlineThree} variant="underline" />
         </section>
 
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Tabbed Cards - 5 Tabs</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Tabbed Cards - 5 Tabs</h2>
           <Tabs items={fiveTabs} activeId={underlineFive} onChange={setUnderlineFive} variant="underline" />
         </section>
 
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Table Tabs - 3 Tabs</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Table Tabs - 3 Tabs</h2>
           <Tabs items={threeTabs} activeId={tableThree} onChange={setTableThree} variant="table" />
         </section>
 
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Table Tabs - 5 Tabs</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Table Tabs - 5 Tabs</h2>
           <Tabs items={fiveTabs} activeId={tableFive} onChange={setTableFive} variant="table" />
         </section>
 
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Pill Navigation - 3 Tabs</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Pill Navigation - 3 Tabs</h2>
           <Tabs items={threeTabs} activeId={pillThree} onChange={setPillThree} variant="pill" />
         </section>
 
         <section>
-          <h2 className="text-display-sm font-bold mb-3">Pill Navigation - 5 Tabs</h2>
+          <h2 className="accu-text-display-sm font-bold mb-3">Pill Navigation - 5 Tabs</h2>
           <Tabs items={fiveTabs} activeId={pillFive} onChange={setPillFive} variant="pill" />
         </section>
       </div>

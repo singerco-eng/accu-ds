@@ -62,7 +62,7 @@ export const ContextMenu = forwardRef<HTMLDivElement, ContextMenuProps>(function
                 type="button"
                 disabled={item.disabled}
                 className={cn(
-                  'flex w-full items-center gap-[var(--accu-space-2)] px-[var(--accu-space-3)] py-[var(--accu-space-2)] text-left text-body-md font-regular text-[var(--accu-primary-blue)]',
+                  'flex w-full items-center gap-[var(--accu-space-2)] px-[var(--accu-space-3)] py-[var(--accu-space-2)] text-left accu-text-body-md font-normal text-[var(--accu-primary-blue)]',
                   item.disabled ? 'cursor-not-allowed text-[var(--accu-gray-4)]' : 'hover:bg-[var(--accu-light-blue)]',
                 )}
                 onClick={() => {

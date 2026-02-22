@@ -4,8 +4,8 @@
 
 **Import**:
 ```tsx
-import { Tile, MilestoneTile } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { Tile, MilestoneTile } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
 ---

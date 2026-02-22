@@ -1,13 +1,13 @@
 # Design Tokens: Colors
 
-AccuLynx Design System color tokens are exposed as CSS custom properties (`--accu-*`) in `@acculynx/design-system/styles.css`. Use them for consistent theming across components and custom UI.
+AccuLynx Design System color tokens are exposed as CSS custom properties (`--accu-*`) in `@al-ds/design-system/styles.css`. Use them for consistent theming across components and custom UI.
 
 ## Import
 
 Ensure the design system styles are loaded:
 
 ```tsx
-import '@acculynx/design-system/styles.css'
+import '@al-ds/design-system/styles.css'
 ```
 
 ---

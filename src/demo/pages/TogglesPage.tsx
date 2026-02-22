@@ -9,7 +9,7 @@ function InteractiveToggle({ label, defaultChecked = false }: { label: string; d
 export default function TogglesPage() {
   return (
     <div>
-      <h1 className="text-display-sm font-bold mb-6">Toggles</h1>
+      <h1 className="accu-text-display-sm font-bold mb-6">Toggles</h1>
 
       <section className="mb-8">
         <h2

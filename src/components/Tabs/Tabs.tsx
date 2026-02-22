@@ -24,7 +24,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
               disabled={item.disabled}
               onClick={() => onChange(item.id)}
               className={cn(
-                'text-body-lg h-[35px] px-3 py-2 font-regular transition-colors focus-visible:outline-none focus-visible:shadow-[var(--accu-focus-ring)] disabled:cursor-not-allowed disabled:opacity-50',
+                'accu-text-body-lg h-[35px] px-3 py-2 font-normal transition-colors focus-visible:outline-none focus-visible:shadow-[var(--accu-focus-ring)] disabled:cursor-not-allowed disabled:opacity-50',
                 radiusClass,
                 active ? 'bg-[var(--accu-primary-blue)] text-white' : 'bg-white text-[var(--accu-primary-blue)]',
               )}
@@ -49,8 +49,8 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
               disabled={item.disabled}
               onClick={() => onChange(item.id)}
               className={cn(
-                'text-body-md relative inline-flex h-[42px] min-w-[96px] items-center justify-center px-4 focus-visible:outline-none focus-visible:shadow-[var(--accu-focus-ring)] disabled:cursor-not-allowed disabled:opacity-50',
-                active ? 'bg-white font-bold text-[var(--accu-blue-dark)]' : 'bg-[var(--accu-gray-0)] font-regular text-[var(--accu-primary-blue)]',
+                'accu-text-body-md relative inline-flex h-[42px] min-w-[96px] items-center justify-center px-4 focus-visible:outline-none focus-visible:shadow-[var(--accu-focus-ring)] disabled:cursor-not-allowed disabled:opacity-50',
+                active ? 'bg-white font-bold text-[var(--accu-blue-dark)]' : 'bg-[var(--accu-gray-0)] font-normal text-[var(--accu-primary-blue)]',
               )}
               style={{
                 borderBottom: active ? '1px solid var(--accu-blue-dark)' : 'none',

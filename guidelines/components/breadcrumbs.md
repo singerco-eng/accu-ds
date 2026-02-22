@@ -4,8 +4,8 @@
 
 **Import**:
 ```tsx
-import { Breadcrumbs } from '@acculynx/design-system'
-import '@acculynx/design-system/styles.css'
+import { Breadcrumbs } from '@al-ds/design-system'
+import '@al-ds/design-system/styles.css'
 ```
 
 **Props**:
