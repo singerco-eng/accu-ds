@@ -49,7 +49,7 @@ Most AccuLynx components accept these common props:
 - All colors use CSS custom properties: `var(--accu-primary-blue)`, `var(--accu-red)`, etc.
 - Use Tailwind's arbitrary value syntax to reference tokens: `bg-[var(--accu-primary-blue)]`
 - Never hard-code hex color values — always use design tokens
-- The Roboto font is automatically applied via the styles CSS import
+- The Roboto font must be loaded via Google Fonts (see Guidelines.md Quick Start). The styles CSS applies it to components.
 
 ### Controlled vs Uncontrolled
 

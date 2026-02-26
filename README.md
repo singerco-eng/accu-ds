@@ -18,14 +18,27 @@ npm install react react-dom
 
 ## Usage
 
-Import components and the required CSS:
+### 1. Load the Roboto font
+
+Add this to your global CSS file (e.g. `index.css` or `globals.css`):
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+```
+
+### 2. Import styles and components
 
 ```tsx
-import { Button, Badge, Toggle } from '@al-ds/design-system'
+// In your app entry point (e.g. main.tsx) — import AFTER any Tailwind or app-level CSS
 import '@al-ds/design-system/styles.css'
+
+// Then import components as needed
+import { Button, Badge, Toggle } from '@al-ds/design-system'
 ```
 
 The CSS import is required — it provides all design tokens (CSS custom properties), Tailwind utilities, and component styles. The CSS is fully self-contained; consumers do NOT need Tailwind installed.
+
+**Import order matters:** If your app uses Tailwind CSS, import `@al-ds/design-system/styles.css` **after** your Tailwind CSS so the design system classes take precedence.
 
 ### Tailwind Preset (Optional)
 

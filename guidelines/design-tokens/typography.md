@@ -18,7 +18,13 @@ import '@al-ds/design-system/styles.css'
 |-------|-------|
 | Font family | `'Roboto', sans-serif` |
 
-Roboto is used for all display and body text. Ensure Roboto is loaded (e.g. via Google Fonts or your app's font setup).
+Roboto is used for all display and body text. You **must** load Roboto before using any components. Add this to your global CSS file:
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+```
+
+All five weights (100, 300, 400, 500, 700) are used across the design system.
 
 ---
 
@@ -117,6 +123,19 @@ These are available via the `typography` export for programmatic use; equivalent
 
 ---
 
+## Tailwind Compatibility
+
+The DS typography classes (`accu-text-display-lg`, `accu-text-body-md`, etc.) are registered as Tailwind v4 `@utility` directives and namespaced with `accu-` to avoid collisions with Tailwind's built-in `text-*` utilities.
+
+**Rules when using alongside Tailwind:**
+- Always use the `accu-` prefix — `accu-text-body-md`, never `text-body-md`
+- Do NOT apply Tailwind's `text-{size}`, `leading-{height}`, or `font-{family}` on the same element as an `accu-text-*` class — the DS class sets all three properties together
+- Tailwind weight classes (`font-normal`, `font-medium`, `font-bold`) are safe to combine with DS typography classes
+- Import `@al-ds/design-system/styles.css` AFTER your Tailwind CSS so the DS classes take precedence
+- Do NOT set global base styles for `font-size`, `font-weight`, or `line-height` on heading elements (`h1`–`h6`) — use the DS classes instead
+
+---
+
 ## Do/Don't
 
 - Do: Use `accu-text-body-lg` for primary content and form inputs
@@ -126,3 +145,4 @@ These are available via the `typography` export for programmatic use; equivalent
 - Don't: Mix non-design-system fonts for UI text; stick to Roboto
 - Don't: Use arbitrary font sizes when a token exists; prefer the scale for consistency
 - Don't: Use unprefixed `text-body-md` or `text-display-lg` — always use the `accu-` prefix
+- Don't: Apply Tailwind `text-sm`, `text-lg`, or `leading-*` alongside `accu-text-*` on the same element

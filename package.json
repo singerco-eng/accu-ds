@@ -1,6 +1,6 @@
 {
   "name": "@al-ds/design-system",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "type": "module",
   "description": "AccuLynx Design System — React component library with design tokens, built from Figma",
   "main": "dist/index.cjs",
